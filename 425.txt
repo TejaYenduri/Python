@@ -1,0 +1,5 @@
+AccountNumber:425
+Name:Alison
+Address:45 Charlie Dr, Apt 222, SFO
+Phone:999-999-9999
+Balance:475
