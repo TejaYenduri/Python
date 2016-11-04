@@ -1,0 +1,2 @@
+2016-11-03 19:42:10,577 - __main__ - INFO -  select * from departmen
+2016-11-03 19:42:10,578 - __main__ - ERROR - (1146, u"Table 'employee.departmen' doesn't exist")
