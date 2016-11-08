@@ -11,4 +11,6 @@ def countLetter(inputStr):
 			value += 1
 			d[c] = value
 	print d
+	l = [(k,v) for k,v in d.iteritems()]
+	print l
 countLetter('commander')
