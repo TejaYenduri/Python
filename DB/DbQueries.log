@@ -1,2 +1,89 @@
 2016-11-03 19:42:10,577 - __main__ - INFO -  select * from departmen
 2016-11-03 19:42:10,578 - __main__ - ERROR - (1146, u"Table 'employee.departmen' doesn't exist")
+2016-11-07 19:45:25,368 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 19:45:25,368 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 19:45:25,368 - DbQueries - ERROR - Cursor closed
+2016-11-07 19:45:25,368 - DbQueries - ERROR - Cursor closed
+2016-11-07 19:48:26,218 - DbQueries - INFO -  select * from Employee
+2016-11-07 19:48:26,218 - DbQueries - INFO -  select * from Employee
+2016-11-07 19:55:53,038 - DbQueries - INFO -  select * from Employee
+2016-11-07 19:55:53,038 - DbQueries - INFO -  select * from Employee
+2016-11-07 19:55:53,043 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 19:55:53,043 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 19:55:53,043 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 19:55:53,047 - DbQueries - INFO -  select * from noDatabase
+2016-11-07 19:55:53,047 - DbQueries - INFO -  select * from noDatabase
+2016-11-07 19:55:53,047 - DbQueries - INFO -  select * from noDatabase
+2016-11-07 19:55:53,047 - DbQueries - INFO -  select * from noDatabase
+2016-11-07 19:55:53,054 - DbQueries - ERROR - (1146, u"Table 'employee.nodatabase' doesn't exist")
+2016-11-07 19:55:53,054 - DbQueries - ERROR - (1146, u"Table 'employee.nodatabase' doesn't exist")
+2016-11-07 19:55:53,054 - DbQueries - ERROR - (1146, u"Table 'employee.nodatabase' doesn't exist")
+2016-11-07 19:55:53,054 - DbQueries - ERROR - (1146, u"Table 'employee.nodatabase' doesn't exist")
+2016-11-07 20:21:26,783 - __main__ - INFO -  select * from noDatabase
+2016-11-07 20:21:26,785 - __main__ - ERROR - (1146, u"Table 'employee.nodatabase' doesn't exist")
+2016-11-07 20:33:58,297 - DbQueries - INFO -  select * from Employee
+2016-11-07 20:33:58,297 - DbQueries - INFO -  select * from Employee
+2016-11-07 20:33:58,305 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 20:33:58,305 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 20:33:58,305 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 20:33:58,310 - DbQueries - INFO -  select * from noDatabase
+2016-11-07 20:33:58,310 - DbQueries - INFO -  select * from noDatabase
+2016-11-07 20:33:58,310 - DbQueries - INFO -  select * from noDatabase
+2016-11-07 20:33:58,310 - DbQueries - INFO -  select * from noDatabase
+2016-11-07 20:33:58,311 - DbQueries - ERROR - (1146, u"Table 'employee.nodatabase' doesn't exist")
+
+2016-11-07 23:04:44,245 - DbQueries - INFO - insert into department(Dname,Dnumber,Mgr_ssn,Mgr_start_date) values ('IT','2','987654321','2010-03-30')
+2016-11-07 23:04:44,245 - DbQueries - INFO - insert into department(Dname,Dnumber,Mgr_ssn,Mgr_start_date) values ('IT','2','987654321','2010-03-30')
+2016-11-07 23:04:44,262 - DbQueries - INFO -  select * from Employee
+2016-11-07 23:04:44,262 - DbQueries - INFO -  select * from Employee
+2016-11-07 23:04:44,262 - DbQueries - INFO -  select * from Employee
+2016-11-07 23:04:44,266 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:04:44,266 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:04:44,266 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:04:44,266 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:06:30,204 - DbQueries - INFO - insert into department(Dname,Dnumber,Mgr_ssn,Mgr_start_date) values ('IT','2','987654321','2010-03-30')
+2016-11-07 23:06:30,204 - DbQueries - INFO - insert into department(Dname,Dnumber,Mgr_ssn,Mgr_start_date) values ('IT','2','987654321','2010-03-30')
+2016-11-07 23:06:30,208 - DbQueries - INFO -  select * from Employee
+2016-11-07 23:06:30,208 - DbQueries - INFO -  select * from Employee
+2016-11-07 23:06:30,208 - DbQueries - INFO -  select * from Employee
+2016-11-07 23:06:30,213 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:06:30,213 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:06:30,213 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:06:30,213 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:10:39,583 - DbQueries - INFO - insert into department(Dname,Dnumber,Mgr_ssn,Mgr_start_date) values ('IT','2','987654321','2010-03-30')
+2016-11-07 23:10:39,583 - DbQueries - INFO - insert into department(Dname,Dnumber,Mgr_ssn,Mgr_start_date) values ('IT','2','987654321','2010-03-30')
+2016-11-07 23:10:39,590 - DbQueries - INFO -  select * from Employee
+2016-11-07 23:10:39,590 - DbQueries - INFO -  select * from Employee
+2016-11-07 23:10:39,590 - DbQueries - INFO -  select * from Employee
+2016-11-07 23:10:39,594 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:10:39,594 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:10:39,594 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:10:39,594 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-07 23:10:39,599 - DbQueries - INFO - update department set Mgr_start_date = '2009-05-31' where Dnumber = '2'
+2016-11-07 23:10:39,599 - DbQueries - INFO - update department set Mgr_start_date = '2009-05-31' where Dnumber = '2'
+2016-11-07 23:10:39,599 - DbQueries - INFO - update department set Mgr_start_date = '2009-05-31' where Dnumber = '2'
+2016-11-07 23:10:39,599 - DbQueries - INFO - update department set Mgr_start_date = '2009-05-31' where Dnumber = '2'
+2016-11-07 23:10:39,599 - DbQueries - INFO - update department set Mgr_start_date = '2009-05-31' where Dnumber = '2'
+2016-11-08 00:46:49,238 - __main__ - INFO - select * from Employee where Dno IN ('1','4')and Sex = 'M'
+2016-11-08 00:46:49,246 - __main__ - INFO -  select * from noDatabase
+2016-11-08 00:46:49,246 - __main__ - ERROR - Cursor closed
+2016-11-08 00:48:21,088 - __main__ - INFO - select * from Employee where Dno IN ('1','4')and Sex = 'M'
+2016-11-08 00:48:21,088 - __main__ - INFO - select * from Employee where Dno IN ('1','4')and Sex = 'M'
+2016-11-08 00:48:21,092 - __main__ - INFO -  select * from department
+2016-11-08 00:48:21,092 - __main__ - INFO -  select * from department
+2016-11-08 00:48:47,766 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-08 00:48:47,766 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+
+2016-11-08 00:54:52,115 - DbQueries - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-08 00:54:52,115 - DbQueries - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-08 00:54:52,120 - DbQueries - INFO -  select * from department
+2016-11-08 00:54:52,120 - DbQueries - INFO -  select * from department
+2016-11-08 00:54:52,129 - DbQueries - INFO -  select * from Employee
+2016-11-08 00:54:52,129 - DbQueries - INFO -  select * from Employee
+2016-11-08 00:54:52,129 - DbQueries - INFO -  select * from Employee
+2016-11-08 00:54:52,129 - DbQueries - INFO -  select * from Employee
+2016-11-08 00:54:52,134 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-08 00:54:52,134 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-08 00:54:52,134 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-08 00:54:52,134 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'
+2016-11-08 00:54:52,134 - DbQueries - INFO - select * from department where Dnumber = '1'and Dname = 'Research'

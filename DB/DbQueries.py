@@ -23,22 +23,20 @@ class DbQueries:
 		password = config.get('MySQLConfig','passwd')
 		database = config.get('MySQLConfig','db')
 		connectionAttempts = config.getint('MySQLConfig','conectionAttempts')
-		self._cursor = None
+		#self._cursor = None
 		self._cursor = self.connectDb(host,port,user,password,database,connectionAttempts) 	
 		#self._connection = pymysql.connect(host=host, port=port, user=user, passwd=password, db=database)
 
 	def connectDb(self,host,port,user,password,database,connectionAttempts):
-		cursor = None
-		if not self._cursor:
-			for i in range(connectionAttempts):
-				try:
-					self._connection = pymysql.connect(host=host, port=port, user=user, passwd=password, db=database)
-					cursor = self._connection.cursor()
-				except pymysql.err.Error as error:
-					time.sleep(5)
-				finally:
-					if cursor:
-						break
+		for i in range(connectionAttempts):
+			try:
+				self._connection = pymysql.connect(host=host, port=port, user=user, passwd=password, db=database)
+				cursor = self._connection.cursor()
+			except pymysql.err.Error as error:
+				time.sleep(5)
+			finally:
+				if cursor:
+					break
 		return cursor
 
 
@@ -47,8 +45,11 @@ class DbQueries:
 		try:
 			#cursor = self._connection.cursor()
 			if(len(dict) >= 1):
-				whereString = 'and '.join("%s = '%s'" % (key,value) for key,value in dict.iteritems())
-				query = "select * from %s where %s" % (table, whereString)	
+				#whereString = 'and '.join("%s = '%s'" % (key,value) for key,value in dict.iteritems())
+				#query = "select * from %s where %s" % (table, whereString)	
+				qStringList = self.buildQuery(dict)
+				whereString = 'and '.join('%s'%string for string in qStringList)
+				query = "select * from %s where %s"%(table,whereString)
 			else:
 				query =" select * from %s" %(table)
 			self.logger.info(query)
@@ -62,7 +63,18 @@ class DbQueries:
 		finally:
 			self._cursor.close()
 			self.closeConnection()
-		
+	def buildQuery(self,columns):
+		queryList = []
+		for column,val in columns.iteritems():
+			qString =''
+			if(type(val) == list):
+				columnList =','.join("'%s'"% value for value in val)
+				qString = ''.join("%s IN (%s)"%(column,columnList))
+			else :
+				 qString = ''.join("%s = '%s'"%(column,val))
+			queryList.append(qString)
+		return queryList
+
 	#inserts values from dictionary into table
 	def insert(self,dict,table):
 		try:
@@ -105,6 +117,12 @@ class DbQueries:
 		self._connection.close()
 
 x=DbQueries('MysqlConDetails.cfg')
-x.select('department',{})
+y=DbQueries('MysqlConDetails.cfg')
+#x.select('department',{})
+#x.finalQuery('Employee',{'Dno':[1,4],'Sex':'M'})
+x.select('Employee',{'Dno':1,'Sex':'M'})
+print "next select is executing "
+y.select('department',{})
+#x.select('noDatabase',{})
 #x.insert({'Dname':'HR','Dnumber':'6','Mgr_ssn':'999999999','Mgr_start_date':'2001-09-02'},'department')
 #x.update({'Dname':'Management','Mgr_ssn':'987654321'},'department',{'Dnumber':6})
