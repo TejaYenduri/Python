@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/Search.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/Search.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="#">Search</a></li>
+            <li role="presentation" class="active"><a href="#">User Tweets</a></li>
+            <li role="presentation"><a href="#">Follower</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Python Twitter App</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Search</h1>
+        <form class="form-tweets">
+            <label for="screenName" class="sr-only">Screen Name</label>
+            <input type="screen_name" name="screenName" id="screenName" class="form-control" placeholder="Screen Name" required autofocus>
+            <button id="submit" class="btn btn-lg btn-primary btn-block" type="button">Submit</button>
+        </form>
+      </div>
+      <div class="tweets">
+
+      </div>
+
+
+
+
+
+    </div>
+  </body>
+</html>
