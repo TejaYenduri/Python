@@ -1,0 +1,34 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.form-tweets {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-tweets .form-tweets-heading,
+.form-tweets .checkbox {
+  margin-bottom: 10px;
+}
+.form-tweets .checkbox {
+  font-weight: normal;
+}
+.form-tweets .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-tweets .form-control:focus {
+  z-index: 2;
+}
+.form-tweets input[type="screen_name"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 1;
+  border-bottom-left-radius: 1;
+}
