@@ -1,0 +1,188 @@
+2016-11-22 10:01:40,979 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:01:40,979 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:01:55,073 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:01:55,073 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:02:03,896 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:02:03,896 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:03:14,271 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:03:14,271 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:29:06,891 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:29:06,891 - __main__ - INFO - select * from Employee where Dno = '1'and Sex = 'M'
+2016-11-22 10:29:06,906 - __main__ - INFO -  select * from department
+2016-11-23 10:51:32,105 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 10:51:32,105 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 10:51:32,114 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:51:32,114 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:51:32,114 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:51:58,378 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:51:58,378 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:51:58,378 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:51:58,378 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:52:10,809 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:52:10,809 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:52:10,809 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:52:10,809 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 10:52:10,809 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:00:52,664 - __main__ - INFO -  select * from department
+2016-11-23 11:03:02,349 - __main__ - INFO -  select * from department
+2016-11-23 11:07:48,736 - DbQueries - INFO -  select * from department
+2016-11-23 11:14:01,816 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 11:14:01,816 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 11:14:01,816 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 11:14:01,816 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 11:14:01,816 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 11:14:01,816 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 11:14:01,831 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:01,831 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:01,831 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:01,831 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:01,831 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:01,831 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:01,831 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:06,955 - DbQueries - INFO -  select * from department
+2016-11-23 11:14:21,572 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-23 11:14:21,572 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-23 11:14:21,603 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 11:14:21,603 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 11:14:21,603 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-23 11:14:21,611 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:21,611 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:21,611 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-23 11:14:21,611 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:24:41,920 - DbQueries - INFO -  select * from department
+2016-11-24 18:29:24,062 - DbQueries - INFO -  select * from department
+2016-11-24 18:32:33,091 - DbQueries - INFO -  select * from department
+2016-11-24 18:33:51,433 - DbQueries - INFO -  select * from department
+2016-11-24 18:38:32,405 - DbQueries - INFO -  select * from department
+2016-11-24 18:38:43,650 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:38:43,650 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:42:34,816 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:42:34,816 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:42:34,816 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:43:52,342 - DbQueries - INFO -  select * from department
+2016-11-24 18:44:08,121 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:44:08,121 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:44:26,367 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:44:26,367 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:44:26,367 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:45:39,998 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:45:39,998 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:45:39,998 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:45:39,998 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:45:44,775 - DbQueries - INFO -  select * from department
+2016-11-24 18:45:50,424 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:45:50,424 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:01,189 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:01,189 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:01,189 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:23,380 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:23,380 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:23,380 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:23,380 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:54,310 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:54,310 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:54,310 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:54,310 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:47:54,310 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:50:06,047 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:50:06,047 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:50:06,047 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:50:06,047 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:50:06,047 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:50:06,047 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:51:03,522 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:51:03,522 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:51:03,522 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:51:03,522 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:51:03,522 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:51:03,522 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:51:03,522 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:56:08,464 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:56:08,464 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:56:08,464 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:56:08,464 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:56:08,464 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:56:08,464 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:56:08,464 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:56:08,464 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-24 18:56:08,515 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-24 18:56:08,515 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-24 18:56:08,515 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-24 18:56:08,515 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-24 18:56:08,515 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-24 18:56:08,515 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-24 18:56:08,515 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-24 18:56:08,515 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-24 18:56:08,515 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber = '1'
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:08,529 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 18:56:32,956 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'and Dnumber IN ('1','5')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:06:39,052 - DbQueries - INFO - insert into Test(lname,fname) values ('Smith','John')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:08:04,627 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zack')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:09:13,758 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:11:17,422 - DbQueries - INFO -  select * from department
+2016-11-24 19:11:25,467 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:11:25,467 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:12:16,246 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:12:16,246 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:12:16,246 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:12:44,980 - DbQueries - INFO -  select * from department
+2016-11-24 19:13:33,684 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:14:16,903 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:15:47,337 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 19:15:47,337 - DbQueries - INFO - insert into Test(lname,fname) values ('Howard','Zoe')
+2016-11-24 21:43:38,257 - DbQueries - INFO - update Test set lname = 'Root' where id = '2'
