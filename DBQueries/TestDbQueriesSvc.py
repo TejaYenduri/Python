@@ -3,8 +3,9 @@ import requests
 import json
 
 
+
 class TestDbQueriesSvc(unittest.TestCase):
-    
+    '''
     def test_select(self):
         payload = {'tableName': 'department', 'columns': {'Mgr_ssn': '333445555'}}
         r = requests.post("http://127.0.0.1:5000/select", json=payload)
@@ -35,3 +36,10 @@ class TestDbQueriesSvc(unittest.TestCase):
         payload = {'tableName': 'Test', 'columns': {'lname': 'Root'}, 'conditions': {'id': 2}}
         result = requests.post("http://127.0.0.1:5000/update", json=payload)
         assert json.loads(result.text), "success"
+    '''
+
+    def test_insert_all(self):
+        files = {'file': open('data.csv', 'rb')}
+        result = requests.post("http://127.0.0.1:5000/insert_all", params={'tablename': 'Test'}, files=files)
+        assert json.loads(result.text), True
+

@@ -2,14 +2,16 @@ import pymysql
 import ConfigParser
 import logging
 import time
+import datetime
 
 
 class DbQueries:
     def __init__(self, configname):
         logging.basicConfig(level=logging.INFO)
         self.logger = logging.getLogger(__name__)
+        log_name = str(datetime.date.today()) + '.txt'
         # create a file handler
-        handler = logging.FileHandler('DbQueries.log')
+        handler = logging.FileHandler(log_name)
         handler.setLevel(logging.INFO)
         # create a logging format
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -103,9 +105,6 @@ class DbQueries:
             code, message = error.args
             print code, message
             return message
-        finally:
-            self._cursor.close()
-            self.close_connection()
 
     def update(self, query_params, table, condition_params):
         """ updates rows based on given conditions """
@@ -131,16 +130,16 @@ class DbQueries:
     def close_connection(self):
 
         try:
+            self._cursor.close()
             self._connection.close()
         except pymysql.err.Error as error:
             self.logger.error(error)
             code, message = error.args
             print code, message
 
-
-#x = DbQueries('MysqlConDetails.cfg')
+# x = DbQueries('MysqlConDetails.cfg')
 # y = DbQueries('MysqlConDetails.cfg')
-#x.select('department', {})
+# x.select('department', {})
 # x.finalQuery('Employee',{'Dno':[1,4],'Sex':'M'})
 # x.select('Employee', {'Dno': 1, 'Sex': 'M'})
 # print "next select is executing "
