@@ -1,0 +1,5 @@
+2016-11-29 21:05:00,409 - __main__ - INFO - invalid file
+2016-11-29 21:07:58,429 - __main__ - INFO - <csv.DictReader instance at 0x108522ea8>
+2016-11-29 21:15:10,577 - __main__ - INFO - table name not provided
+2016-11-29 21:17:24,798 - __main__ - INFO - (('Research', 1, '333445555', '1981-06-19'), ('Administration', 5, '333445555', '1988-05-22'))
+2016-11-29 21:17:30,204 - __main__ - INFO - (('Research', 1, '333445555', '1981-06-19'), ('Administration', 5, '333445555', '1988-05-22'))

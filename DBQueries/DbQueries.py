@@ -9,7 +9,7 @@ class DbQueries:
     def __init__(self, configname):
         logging.basicConfig(level=logging.INFO)
         self.logger = logging.getLogger(__name__)
-        log_name = str(datetime.date.today()) + '.txt'
+        log_name = str(datetime.date.today()) + '.log'
         # create a file handler
         handler = logging.FileHandler(log_name)
         handler.setLevel(logging.INFO)

@@ -1,0 +1,3 @@
+2016-11-29 21:17:24,796 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-29 21:17:30,203 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
+2016-11-29 21:17:30,203 - DbQueries - INFO - select * from department where Mgr_ssn = '333445555'
