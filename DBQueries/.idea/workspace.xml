@@ -23,8 +23,8 @@
       <file leaf-file-name="DbQueries.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DbQueries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+            <state relative-caret-position="180">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -35,10 +35,10 @@
       <file leaf-file-name="DbQueriesSvc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DbQueriesSvc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+            <state relative-caret-position="-71">
+              <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,21 +47,11 @@
       <file leaf-file-name="TestDbQueriesSvc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestDbQueriesSvc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+            <state relative-caret-position="364">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DbQueries.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DbQueries.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="98" column="98" selection-start-line="98" selection-start-column="98" selection-end-line="98" selection-end-column="98" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -92,15 +82,17 @@
         <option value="$PROJECT_DIR$/static/select.html" />
         <option value="$PROJECT_DIR$/MakeRequests.py" />
         <option value="$PROJECT_DIR$/TestingDbQueries.py" />
-        <option value="$PROJECT_DIR$/TestDbQueriesSvc.py" />
         <option value="$PROJECT_DIR$/DbQueriesSvc.py" />
         <option value="$PROJECT_DIR$/DbQueries.py" />
+        <option value="$PROJECT_DIR$/TestDbQueriesSvc.py" />
+        <option value="$PROJECT_DIR$/2016-11-29.log" />
+        <option value="$PROJECT_DIR$/2016-11-29api.log" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="34" />
-    <option name="y" value="71" />
+    <option name="x" value="40" />
+    <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="788" />
   </component>
@@ -175,7 +167,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest TestDbQueriesSvc.test_insert_all">
+  <component name="RunManager" selected="Python tests.Unittests in TestDbQueriesSvc">
     <configuration default="false" name="Unittests in TestDbQueriesSvc (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -191,28 +183,6 @@
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest TestDbQueriesSvc.test_insert" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DBQueries" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestDbQueriesSvc.py" />
-      <option name="CLASS_NAME" value="TestDbQueriesSvc" />
-      <option name="METHOD_NAME" value="test_insert" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -254,7 +224,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest TestDbQueriesSvc.test_insert_all" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittest TestDbQueriesSvc.test_select_error" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -266,9 +236,31 @@
       <module name="DBQueries" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestDbQueriesSvc.py" />
       <option name="CLASS_NAME" value="TestDbQueriesSvc" />
-      <option name="METHOD_NAME" value="test_insert_all" />
+      <option name="METHOD_NAME" value="test_select_error" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in TestDbQueriesSvc" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DBQueries" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestDbQueriesSvc.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -412,18 +404,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestDbQueriesSvc (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestDbQueriesSvc.test_insert" />
-      <item index="2" class="java.lang.String" itemvalue="Python.DbQueries" />
-      <item index="3" class="java.lang.String" itemvalue="Python.DbQueriesSvc" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestDbQueriesSvc.test_insert_all" />
+      <item index="1" class="java.lang.String" itemvalue="Python.DbQueries" />
+      <item index="2" class="java.lang.String" itemvalue="Python.DbQueriesSvc" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestDbQueriesSvc.test_select_error" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestDbQueriesSvc" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestDbQueriesSvc.test_insert_all" />
-        <item index="1" class="java.lang.String" itemvalue="Python.DbQueriesSvc" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestDbQueriesSvc (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestDbQueriesSvc" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestDbQueriesSvc (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.DbQueriesSvc" />
         <item index="3" class="java.lang.String" itemvalue="Python.DbQueries" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestDbQueriesSvc.test_insert" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestDbQueriesSvc.test_select_error" />
       </list>
     </recent_temporary>
   </component>
@@ -441,47 +433,48 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_TestDbQueriesSvc_test_insert_all - 2016.11.28 at 21h 12m 10s.xml">
-      <configuration name="Unittest TestDbQueriesSvc.test_insert_all" configurationId="tests" />
+    <history-entry file="Unittests_in_TestDbQueriesSvc - 2016.11.29 at 01h 17m 24s.xml">
+      <configuration name="Unittests in TestDbQueriesSvc" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestDbQueriesSvc_test_insert_all - 2016.11.28 at 21h 18m 02s.xml">
-      <configuration name="Unittest TestDbQueriesSvc.test_insert_all" configurationId="tests" />
+    <history-entry file="Unittests_in_TestDbQueriesSvc - 2016.11.29 at 01h 17m 30s.xml">
+      <configuration name="Unittests in TestDbQueriesSvc" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestDbQueriesSvc_test_insert_all - 2016.11.28 at 21h 42m 35s.xml">
-      <configuration name="Unittest TestDbQueriesSvc.test_insert_all" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.28 at 21h 11m 37s.xml">
+    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.29 at 01h 05m 00s.xml">
       <configuration name="Unittests in TestDbQueriesSvc (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.28 at 21h 14m 05s.xml">
+    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.29 at 01h 07m 58s.xml">
       <configuration name="Unittests in TestDbQueriesSvc (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.28 at 21h 17m 18s.xml">
+    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.29 at 01h 09m 51s.xml">
       <configuration name="Unittests in TestDbQueriesSvc (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.28 at 21h 19m 01s.xml">
+    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.29 at 01h 11m 05s.xml">
       <configuration name="Unittests in TestDbQueriesSvc (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.28 at 21h 23m 08s.xml">
+    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.29 at 01h 13m 29s.xml">
       <configuration name="Unittests in TestDbQueriesSvc (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.28 at 21h 26m 15s.xml">
+    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.29 at 01h 15m 10s.xml">
       <configuration name="Unittests in TestDbQueriesSvc (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.28 at 21h 34m 45s.xml">
+    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.29 at 01h 15m 37s.xml">
+      <configuration name="Unittests in TestDbQueriesSvc (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestDbQueriesSvc_(1) - 2016.11.29 at 01h 15m 45s.xml">
       <configuration name="Unittests in TestDbQueriesSvc (1)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="71" width="1400" height="788" extended-state="0" />
+    <frame x="40" y="23" width="1400" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962447" sideWeight="0.5057143" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.5114286" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.4942857" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962447" sideWeight="0.4942857" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.48857144" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -491,7 +484,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -499,15 +491,15 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.5114286" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.48857144" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.4942857" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -527,7 +519,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -547,7 +539,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -595,7 +587,7 @@
         <state relative-caret-position="435">
           <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -625,7 +617,7 @@
         <state relative-caret-position="255">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -687,27 +679,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DbQueriesSvc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestDbQueriesSvc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2016-11-28.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016-11-29api">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -717,16 +697,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DbQueries.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
+        <state relative-caret-position="1470">
           <caret line="98" column="98" selection-start-line="98" selection-start-column="98" selection-end-line="98" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/2016-11-29">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbQueriesSvc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71">
+          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016-11-29.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016-11-29api.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDbQueriesSvc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DbQueries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

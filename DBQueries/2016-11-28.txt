@@ -1,2 +1,0 @@
-2016-11-28 21:42:35,146 - DbQueries - INFO - insert into Test(lname,fname) values ('Borg','James')
-2016-11-28 21:42:35,147 - DbQueries - INFO - insert into Test(lname,fname) values ('Zelaya','Alicia')

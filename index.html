@@ -1,0 +1,29 @@
+
+<script type="text/javascript"
+  src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  ("#submit").click(function() {
+    
+      $.getJSON($SCRIPT_ROOT + '/search', {
+        a: $('input[name="screenName"]').val(),
+        b: $('input[name="searchText"]').val()
+      }, function(data) {
+        $.each(data, function(index,element){
+            $('body').append($('<div>',{
+              text: element.name
+            }));
+          });
+      })
+    });
+      
+    
+    
+  
+</script>
+<h1>Search Tweets</h1>
+<p>
+  Screen Name <input type="text" size="5" name="screenName"> 
+  Search Text <input type="text" size="5" name="searchText"> 
+  <span id="result">?</span>
+<p><input type="submit" id="submit"></input>
