@@ -1,5 +1,6 @@
 import ConfigParser
 import os
+import sys
 import csv
 import logging
 import datetime
@@ -11,19 +12,29 @@ import requests
 
 
 class Device42Svc:
-    def __init__(self):
-        config = ConfigParser.SafeConfigParser()
-        config.read('credentials.cfg')
+    def __init__(self, filename):
+
         self.logger = self.config_logs()
-        self.user = config.get('credentials', 'USER')
-        self.password = config.get('credentials', 'PASSWORD')
-        self.base_url = config.get('credentials', 'BASE_URL')
-        self.buildings_url = config.get('credentials', 'BUILDINGS_URL')
-        self.rooms_url = config.get('credentials', 'ROOMS_URL')
-        self.racks_url = config.get('credentials', 'RACKS_URL')
-        self.devices_url = config.get('credentials', 'DEVICES_URL')
-        self.devices_rack_url = config.get('credentials', 'DEVICES_RACK_URL')
-        self.hardware_model = config.get('credentials', 'HARDWARE_MODEL')
+        # if len(sys.argv) != 2:
+        #    filename = sys.argv[2]
+        # else:
+        #   self.logger.info("please provide config file name")
+        # filename = raw_input(" enter the config filename ")
+        if filename != '' and os.path.isfile(filename) and filename.endswith('.cfg'):
+            try:
+                config = ConfigParser.SafeConfigParser()
+                config.read(filename)
+                self.user = config.get('credentials', 'USER')
+                self.password = config.get('credentials', 'PASSWORD')
+                self.base_url = config.get('credentials', 'BASE_URL')
+                self.buildings_url = config.get('credentials', 'BUILDINGS_URL')
+                self.rooms_url = config.get('credentials', 'ROOMS_URL')
+                self.racks_url = config.get('credentials', 'RACKS_URL')
+                self.devices_url = config.get('credentials', 'DEVICES_URL')
+                self.devices_rack_url = config.get('credentials', 'DEVICES_RACK_URL')
+                self.hardware_model = config.get('credentials', 'HARDWARE_MODEL')
+            except ConfigParser.Error as err:
+                self.logger.error(err)
 
     @staticmethod
     def config_logs():
@@ -367,7 +378,7 @@ class Device42Svc:
             self.logger.error(err)
 
 
-d42 = Device42Svc()
+d42 = Device42Svc('credentials.cfg')
 # d42.get_all_buildings()
 # d42.get_all_rooms()
 # d42.post_hardware_model({'name': 'PE 1950', 'type': '1', 'size': '1', 'depth': '1', 'part_no': '123', 'watts': '265',
