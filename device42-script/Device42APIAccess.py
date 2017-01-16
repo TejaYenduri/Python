@@ -5,6 +5,7 @@ import csv
 import logging
 import datetime
 import requests
+import ParameterException
 
 '''
 
@@ -12,29 +13,33 @@ import requests
 
 
 class Device42Svc:
-    def __init__(self, filename):
+    def __init__(self):
 
         self.logger = self.config_logs()
-        # if len(sys.argv) != 2:
-        #    filename = sys.argv[2]
-        # else:
-        #   self.logger.info("please provide config file name")
-        # filename = raw_input(" enter the config filename ")
-        if filename != '' and os.path.isfile(filename) and filename.endswith('.cfg'):
-            try:
-                config = ConfigParser.SafeConfigParser()
-                config.read(filename)
-                self.user = config.get('credentials', 'USER')
-                self.password = config.get('credentials', 'PASSWORD')
-                self.base_url = config.get('credentials', 'BASE_URL')
-                self.buildings_url = config.get('credentials', 'BUILDINGS_URL')
-                self.rooms_url = config.get('credentials', 'ROOMS_URL')
-                self.racks_url = config.get('credentials', 'RACKS_URL')
-                self.devices_url = config.get('credentials', 'DEVICES_URL')
-                self.devices_rack_url = config.get('credentials', 'DEVICES_RACK_URL')
-                self.hardware_model = config.get('credentials', 'HARDWARE_MODEL')
-            except ConfigParser.Error as err:
-                self.logger.error(err)
+        if len(sys.argv) > 1:
+            cfg_filename = sys.argv[1]
+            if len(sys.argv) == 3:
+                self.csv_filename = sys.argv[2]
+            else:
+                self.csv_filename = 'deviceHard.csv'
+
+            if cfg_filename != '' and os.path.isfile(cfg_filename) and cfg_filename.endswith('.cfg'):
+                try:
+                    config = ConfigParser.SafeConfigParser()
+                    config.read(cfg_filename)
+                    self.user = config.get('credentials', 'USER')
+                    self.password = config.get('credentials', 'PASSWORD')
+                    self.base_url = config.get('credentials', 'BASE_URL')
+                    self.buildings_url = config.get('credentials', 'BUILDINGS_URL')
+                    self.rooms_url = config.get('credentials', 'ROOMS_URL')
+                    self.racks_url = config.get('credentials', 'RACKS_URL')
+                    self.devices_url = config.get('credentials', 'DEVICES_URL')
+                    self.devices_rack_url = config.get('credentials', 'DEVICES_RACK_URL')
+                    self.hardware_model = config.get('credentials', 'HARDWARE_MODEL')
+                except ConfigParser.Error as err:
+                    self.logger.error(err)
+        else:
+            self.logger.info("please provide config file name")
 
     @staticmethod
     def config_logs():
@@ -54,83 +59,65 @@ class Device42Svc:
         logger.addHandler(handler)
         return logger
 
-    def get_all_buildings(self):
+    def get_method(self, url):
         """
-        Getting all buildings information
+        Generic method for get request
+        :param url:
+        :return:
         """
         try:
-            response = requests.request('GET', self.buildings_url,
+            response = requests.request('GET', url,
                                         auth=(self.user, self.password), verify=False)
-            # print response.text
             response.encoding = 'utf-8'
             output = response.json()
             self.logger.info(output)
             return output
+            # print response.text
         except requests.exceptions.RequestException as err:
             self.logger.error(err)
+
+    def get_all_buildings(self):
+        """
+        Getting all buildings information
+        """
+        response = self.get_method(self.buildings_url)
+        return response
 
     def get_all_rooms(self):
         """
         Getting all rooms information from device42 application using get request
         """
-        try:
-            response = requests.get(self.rooms_url, auth=(self.user, self.password), verify=False)
-            print response.text
-            response.encoding = 'utf-8'
-            output = response.json()
-            self.logger.info(output)
-            return output
-        except requests.exceptions.RequestException as err:
-            self.logger.error(err)
+        response = self.get_method(self.rooms_url)
+        return response
 
     def get_all_racks(self):
         """
         Getting all racks information from device42 application using get request
         """
-        try:
-            response = requests.get(self.racks_url, auth=(self.user, self.password), verify=False)
-            print response.text
-            response.encoding = 'utf-8'
-            output = response.json()
-            self.logger.info(output)
-            return output
-        except requests.exceptions.RequestException as err:
-            self.logger.error(err)
+        response = self.get_method(self.racks_url)
+        return response
 
     def get_all_models(self):
         """
         Getting all hardware models information from device42 application using get request
         """
-        try:
-            response = requests.get(self.hardware_model, auth=(self.user, self.password), verify=False)
-            print response.text
-            response.encoding = 'utf-8'
-            output = response.json()
-            self.logger.info(output)
-            return output
-        except requests.exceptions.RequestException as err:
-            self.logger.error(err)
+        response = self.get_method(self.hardware_model)
+        return response
 
     def get_all_devices(self):
         """
         Getting all devices information from device42 application using get request
         """
-        try:
-            response = requests.get(self.devices_url, auth=(self.user, self.password), verify=False)
-            print response.text
-            response.encoding = 'utf-8'
-            res_json = response.json()
-            self.logger.info(res_json)
-            return res_json
-        except requests.exceptions.RequestException as err:
-            self.logger.error(err)
+        response = self.get_method(self.devices_url)
+        return response
 
-    def post_building(self, payload):
+    def post_method(self, url, payload):
         """
-        Create a building with given data in device42 using POST
+        Generic method for post
+        :return:
         """
         try:
-            response = requests.post(self.buildings_url, auth=(self.user, self.password),
+            response = requests.post(url, auth=(self.user, self.password),
                                      verify=False, data=payload)
             self.logger.info(response)
             return response
@@ -138,10 +125,26 @@ class Device42Svc:
             self.logger.error(err)
             raise
 
+    def post_building(self, payload):
+        """
+        Create a building with given data in device42 using POST
+        """
+        if not payload['name']:
+            msg = "missing required parameter building name"
+            self.logger.info(msg)
+            raise ParameterException.ParameterException(msg)
+        else:
+            response = self.post_method(self.buildings_url, payload)
+            return response
+
     def post_room(self, payload):
         """
         Create a room with given data in device42 using POST
         """
+        if not payload['name'] and (payload['building_id'] or payload['building_name']):
+            msg = "missing required parameters room name, building or building_id"
+            self.logger.info(msg)
+            raise ParameterException.ParameterException(msg)
         try:
             if 'building' in payload and \
                             payload['building'] != '' or payload['building'] is not None:
@@ -150,13 +153,11 @@ class Device42Svc:
                 if not is_found:
                     building_dict = {'name': payload['building']}
                     self.post_building(building_dict)
-            response = requests.post(self.rooms_url, auth=(self.user, self.password),
-                                     verify=False, data=payload)
-            self.logger.info(response)
+            response = self.post_method(self.rooms_url, payload)
             return response
-        except requests.exceptions.RequestException as err:
+        except (requests.exceptions.RequestException, ParameterException.ParameterException) as err:
             self.logger.error(err)
-            raise
+            raise err
 
     def post_rack(self, payload):
         """
@@ -326,13 +327,13 @@ class Device42Svc:
         else:
             print "invalid file"
 
-    def post_devices_csv(self, filename):
+    def post_devices_csv(self):
         """
          Read data from csv file and create a building in device42 using POST
         """
-        if os.path.isfile(filename) and filename != '' and filename.endswith('.csv'):
+        if os.path.isfile(self.csv_filename) and self.csv_filename != '' and self.csv_filename.endswith('.csv'):
             try:
-                file_object = open(filename, 'r')
+                file_object = open(self.csv_filename, 'r')
                 records = csv.DictReader(file_object)
 
                 for record in records:
@@ -352,39 +353,38 @@ class Device42Svc:
         else:
             print "invalid file"
 
-    def delete_building(self, building_id):
-        """
-             Delete building in device42
-             Need to implement logic for removing racks and rooms and updating devices.
-        """
+    def delete_method_using_id(self, url, entity_id):
         try:
-            response = requests.delete(self.buildings_url + str(building_id), auth=(self.user, self.password),
+            response = requests.delete(url + str(entity_id), auth=(self.user, self.password),
                                        verify=False)
             self.logger.info(response)
             return response
         except requests.exceptions.RequestException as err:
             self.logger.error(err)
 
+    def delete_building(self, building_id):
+        """
+             Delete building in device42
+             Need to implement logic for removing racks and rooms and updating devices.
+        """
+        response = self.delete_method_using_id(self.buildings_url, building_id)
+        return response
+
     def delete_device(self, device_id):
         """
          Delete building in device42
         """
-        try:
-            response = requests.delete(self.devices_url + str(device_id),
-                                       auth=(self.user, self.password), verify=False)
-            self.logger.info(response)
-            return response
-        except requests.exceptions.RequestException as err:
-            self.logger.error(err)
+        response = self.delete_method_using_id(self.devices_url, device_id)
+        return response
 
 
-d42 = Device42Svc('credentials.cfg')
+d42 = Device42Svc()
 # d42.get_all_buildings()
 # d42.get_all_rooms()
 # d42.post_hardware_model({'name': 'PE 1950', 'type': '1', 'size': '1', 'depth': '1', 'part_no': '123', 'watts': '265',
 #                        'spec_url': 'www.dell.com', 'manufacturer': 'dell', 'notes': 'hellp'})
 # d42.post_hardware_model({'name': 'h1'})
-# d42.post_devices_csv('deviceHard.csv')
+d42.post_devices_csv()
 # d42.post_building({'name':'Building2'})
 # d42.post_device({'name':'db-080-westport','type':'cluster','in_service':'no','virtual_host':'yui','service_level':'production','macaddress':'aabbccedffff'})
 # d42.get_all_devices()
