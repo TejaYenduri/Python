@@ -129,25 +129,20 @@ class Device42Svc:
         """
         Create a building with given data in device42 using POST
         """
-        if not payload['name']:
-            msg = "missing required parameter building name"
-            self.logger.info(msg)
-            raise ParameterException.ParameterException(msg)
-        else:
-            response = self.post_method(self.buildings_url, payload)
-            return response
+        try:
+            self.check_params('building', payload)
+        except ParameterException.ParameterException as err:
+            self.logger.error(err)
+        response = self.post_method(self.buildings_url, payload)
+        return response
 
     def post_room(self, payload):
         """
         Create a room with given data in device42 using POST
         """
-        if not payload['name'] and (payload['building_id'] or payload['building_name']):
-            msg = "missing required parameters room name, building or building_id"
-            self.logger.info(msg)
-            raise ParameterException.ParameterException(msg)
         try:
-            if 'building' in payload and \
-                            payload['building'] != '' or payload['building'] is not None:
+            self.check_params('room', payload)
+            if 'building' in payload and payload['building'] != '' or payload['building'] is not None:
                 buildings = self.get_all_buildings()
                 is_found = self.is_building_exists(buildings, payload['building'])
                 if not is_found:
@@ -164,6 +159,7 @@ class Device42Svc:
         Create a rack with given data in device42 using POST
         """
         try:
+            self.check_params('rack', payload)
             if 'room' in payload and (payload['room'] != '' or payload['room'] is not None):
                 rooms = self.get_all_rooms()
                 room_dict = {'name': payload['room'], 'building': payload['building']}
@@ -230,6 +226,7 @@ class Device42Svc:
         :return:
         """
         try:
+            self.check_params('device', payload)
             if 'hardware' in payload and (payload['hardware'] != ''
                                           and payload['hardware'] is not None):
                 models = self.get_all_models()
@@ -243,6 +240,21 @@ class Device42Svc:
             return response
         except requests.exceptions.RequestException as err:
             self.logger.error(err)
+
+    def check_params(self, type_of_payload, payload):
+        msg = "Success"
+        if type_of_payload is 'building':
+            if not payload['name']:
+                msg = "missing required parameter building name"
+        if type_of_payload is 'room':
+            if not payload['name'] and (payload['building_id'] or payload['building']):
+                msg = "missing required parameters room name, building or building_id"
+        if type_of_payload is 'rack' or 'device':
+            if not payload['name']:
+                msg = "missing required parameters " + type_of_payload + " name"
+        if not msg == "Success":
+            self.logger.info(msg)
+            raise ParameterException.ParameterException(msg)
 
     @staticmethod
     def is_building_exists(buildings, building_name):
