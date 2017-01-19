@@ -1,0 +1,18 @@
+2017-01-19 07:18:19,241 - __main__ - INFO - {u'detail': u'You do not have permission to access this resource. You may need to login or otherwise authenticate the request.'}
+2017-01-19 07:19:59,046 - __main__ - INFO - <Response [200]>
+2017-01-19 07:19:59,194 - __main__ - INFO - <Response [200]>
+2017-01-19 07:29:51,891 - __main__ - INFO - <Response [200]>
+2017-01-19 07:29:52,041 - __main__ - INFO - <Response [200]>
+2017-01-19 07:30:58,936 - __main__ - INFO - <Response [200]>
+2017-01-19 07:30:59,062 - __main__ - INFO - <Response [200]>
+2017-01-19 07:46:41,106 - __main__ - INFO - <Response [403]>
+2017-01-19 07:46:41,214 - __main__ - INFO - <Response [403]>
+2017-01-19 07:50:18,923 - __main__ - INFO - <Response [403]>
+2017-01-19 07:50:18,926 - __main__ - INFO - <Response [403]>
+2017-01-19 07:50:19,066 - __main__ - INFO - <Response [403]>
+2017-01-19 07:51:26,341 - __main__ - INFO - <Response [403]>
+2017-01-19 07:51:26,451 - __main__ - INFO - <Response [403]>
+2017-01-19 08:07:25,146 - __main__ - INFO - <Response [403]>
+2017-01-19 08:07:25,306 - __main__ - INFO - <Response [403]>
+2017-01-19 08:07:56,439 - __main__ - INFO - <Response [403]>
+2017-01-19 08:07:56,536 - __main__ - INFO - <Response [403]>

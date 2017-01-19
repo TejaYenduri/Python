@@ -5,7 +5,10 @@ import csv
 import logging
 import datetime
 import requests
+from requests import RequestException
+from requests import HTTPError
 import ParameterException
+import json
 
 '''
 
@@ -13,33 +16,60 @@ import ParameterException
 
 
 class Device42Svc:
-    def __init__(self):
-
+    def __init__(self, filename):
         self.logger = self.config_logs()
         if len(sys.argv) > 1:
             cfg_filename = sys.argv[1]
+            print cfg_filename
             if len(sys.argv) == 3:
                 self.csv_filename = sys.argv[2]
             else:
                 self.csv_filename = 'deviceHard.csv'
+        if not filename == '':
+            cfg_filename = filename
+            print cfg_filename
+            self.csv_filename = 'deviceHard.csv'
 
-            if cfg_filename != '' and os.path.isfile(cfg_filename) and cfg_filename.endswith('.cfg'):
-                try:
-                    config = ConfigParser.SafeConfigParser()
-                    config.read(cfg_filename)
-                    self.user = config.get('credentials', 'USER')
-                    self.password = config.get('credentials', 'PASSWORD')
-                    self.base_url = config.get('credentials', 'BASE_URL')
-                    self.buildings_url = config.get('credentials', 'BUILDINGS_URL')
-                    self.rooms_url = config.get('credentials', 'ROOMS_URL')
-                    self.racks_url = config.get('credentials', 'RACKS_URL')
-                    self.devices_url = config.get('credentials', 'DEVICES_URL')
-                    self.devices_rack_url = config.get('credentials', 'DEVICES_RACK_URL')
-                    self.hardware_model = config.get('credentials', 'HARDWARE_MODEL')
-                except ConfigParser.Error as err:
-                    self.logger.error(err)
+        if cfg_filename != '' and os.path.isfile(cfg_filename) and cfg_filename.endswith('.cfg'):
+            try:
+                config = ConfigParser.SafeConfigParser()
+                config.read(cfg_filename)
+                self.user = config.get('credentials', 'USER')
+                self.password = config.get('credentials', 'PASSWORD')
+                self.base_url = config.get('credentials', 'BASE_URL')
+                self.buildings_url = config.get('credentials', 'BUILDINGS_URL')
+                self.rooms_url = config.get('credentials', 'ROOMS_URL')
+                self.racks_url = config.get('credentials', 'RACKS_URL')
+                self.devices_url = config.get('credentials', 'DEVICES_URL')
+                self.devices_rack_url = config.get('credentials', 'DEVICES_RACK_URL')
+                self.hardware_model = config.get('credentials', 'HARDWARE_MODEL')
+                self.is_cache = config.get('credentials', 'IS_CACHE')
+                if self.is_cache:
+                    self.update_cache()
+
+            except ConfigParser.Error as err:
+                self.logger.error(err)
         else:
             self.logger.info("please provide config file name")
+
+    def update_cache(self):
+        path = os.getcwd()
+        buildings_file_path = path + "/cache/buildings_cache.json"
+        response = self.get_all_buildings()
+        print response.json()
+        if response.status_code == 200:
+            if os.path.getsize(buildings_file_path) == 0:
+                print "entered if"
+                with open(buildings_file_path, 'w') as f:
+                    json.dump(response.json(), f)
+            else:
+                output = response.json()
+                with open(buildings_file_path, 'r') as f:
+                    data = json.load(f)
+                if output['total_count'] == data['total_count']:
+                    self.logger.info("up to date")
+        else:
+            print "invalid response"
 
     @staticmethod
     def config_logs():
@@ -69,11 +99,9 @@ class Device42Svc:
             response = requests.request('GET', url,
                                         auth=(self.user, self.password), verify=False)
             response.encoding = 'utf-8'
-            output = response.json()
-            self.logger.info(output)
-            return output
-            # print response.text
-        except requests.exceptions.RequestException as err:
+            self.logger.info(response)
+            return response
+        except (RequestException, HTTPError) as err:
             self.logger.error(err)
 
     def get_all_buildings(self):
@@ -390,13 +418,13 @@ class Device42Svc:
         return response
 
 
-d42 = Device42Svc()
-# d42.get_all_buildings()
+d42 = Device42Svc('credentials.cfg')
+d42.get_all_buildings()
 # d42.get_all_rooms()
 # d42.post_hardware_model({'name': 'PE 1950', 'type': '1', 'size': '1', 'depth': '1', 'part_no': '123', 'watts': '265',
 #                        'spec_url': 'www.dell.com', 'manufacturer': 'dell', 'notes': 'hellp'})
 # d42.post_hardware_model({'name': 'h1'})
-d42.post_devices_csv()
+# d42.post_devices_csv()
 # d42.post_building({'name':'Building2'})
 # d42.post_device({'name':'db-080-westport','type':'cluster','in_service':'no','virtual_host':'yui','service_level':'production','macaddress':'aabbccedffff'})
 # d42.get_all_devices()

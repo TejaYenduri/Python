@@ -1,0 +1,21 @@
+2017-01-18 09:40:10,942 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 09:42:08,482 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 09:43:00,401 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 09:44:43,035 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 09:49:20,018 - __main__ - ERROR - HTTPSConnectionPool(host='172.20.5.47', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x101145d10>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-18 09:51:15,513 - __main__ - ERROR - HTTPSConnectionPool(host='172.20.5.47', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x108424810>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-18 09:52:26,210 - __main__ - INFO - {u'detail': u'You do not have permission to access this resource. You may need to login or otherwise authenticate the request.'}
+2017-01-18 09:53:51,765 - __main__ - INFO - {u'detail': u'You do not have permission to access this resource. You may need to login or otherwise authenticate the request.'}
+2017-01-18 09:55:05,169 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 09:55:42,501 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 09:56:55,985 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 11:02:56,822 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 11:03:21,454 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 11:04:46,440 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 11:07:13,525 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 11:08:02,490 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 11:09:34,007 - Device42APIAccess - INFO - please provide config file name
+2017-01-18 11:13:11,614 - Device42APIAccess - INFO - {u'detail': u'You do not have permission to access this resource. You may need to login or otherwise authenticate the request.'}
+2017-01-18 11:14:11,881 - Device42APIAccess - INFO - {u'detail': u'You do not have permission to access this resource. You may need to login or otherwise authenticate the request.'}
+2017-01-18 23:14:08,421 - __main__ - INFO - {u'detail': u'You do not have permission to access this resource. You may need to login or otherwise authenticate the request.'}
+2017-01-18 23:15:23,005 - __main__ - INFO - {u'detail': u'You do not have permission to access this resource. You may need to login or otherwise authenticate the request.'}
