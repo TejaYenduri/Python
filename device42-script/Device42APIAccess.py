@@ -55,7 +55,7 @@ class Device42Svc:
     def update_cache(self):
         path = os.getcwd()
         buildings_file_path = path + "/cache/buildings_cache.json"
-        response = self.get_all_buildings()
+        response = self.get_method(self.buildings_url)
         print response.json()
         if response.status_code == 200:
             if os.path.getsize(buildings_file_path) == 0:
@@ -108,7 +108,11 @@ class Device42Svc:
         """
         Getting all buildings information
         """
-        response = self.get_method(self.buildings_url)
+        if self.is_cache:
+            with open(os.getcwd()+"/cache/buildings_cache.json", 'r') as f:
+                response = json.load(f)
+        else:
+            response = self.get_method(self.buildings_url)
         return response
 
     def get_all_rooms(self):
