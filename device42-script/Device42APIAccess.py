@@ -66,17 +66,11 @@ class Device42Svc:
         path = os.getcwd() + file_path
         response = self.get_method(url)
         if response.status_code == 200:
-            if os.path.getsize(path) == 0:
-                with open(path, 'w') as f:
-                    json.dump(response.json(), f, indent=4, sort_keys=True)
-            else:
-                output = response.json()
-                with open(path, 'r') as f:
-                    data = json.load(f)
-                if output['total_count'] == data['total_count']:
-                    self.logger.info("up to date")
+            with open(path, 'w') as f:
+                json.dump(response.json(), f, indent=4, sort_keys=True)
+                self.logger.info("cache up to date")
         else:
-            print "invalid response"
+            self.logger.info(response)
 
     @staticmethod
     def read_from_cache(file_path):
@@ -195,7 +189,7 @@ class Device42Svc:
             self.check_params('building', payload)
         except ParameterException as err:
             self.logger.error(err)
-        response = self.post_method(self.buildings_url, payload, os.getcwd()+self.buildings_cache)
+        response = self.post_method(self.buildings_url, payload, os.getcwd() + self.buildings_cache)
         return response
 
     def post_room(self, payload):
@@ -241,7 +235,7 @@ class Device42Svc:
                 Create a hardware model with given data in device42 using POST
         """
         try:
-            response = self.post_method(self.hardware_model, payload, os.getcwd()+self.hardware_cache)
+            response = self.post_method(self.hardware_model, payload, os.getcwd() + self.hardware_cache)
             self.logger.info(response)
             return response
         except RequestException as err:
@@ -271,7 +265,7 @@ class Device42Svc:
             if 'start_at' not in payload:
                 payload['start_at'] = 'auto'
 
-            response = self.post_method(self.devices_rack_url, payload, os.getcwd()+self.devices_cache)
+            response = self.post_method(self.devices_rack_url, payload, os.getcwd() + self.devices_cache)
             self.logger.info(response)
             return response
         except RequestException as err:
@@ -292,7 +286,7 @@ class Device42Svc:
                 if not is_found:
                     hardware_dict = {'name': payload['hardware']}
                     self.post_hardware_model(hardware_dict)
-            response = self.post_method(self.devices_url, payload, os.getcwd()+self.devices_cache)
+            response = self.post_method(self.devices_url, payload, os.getcwd() + self.devices_cache)
             self.logger.info(response)
             return response
         except (RequestException, ParameterException) as err:
