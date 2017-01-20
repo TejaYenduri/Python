@@ -7,7 +7,7 @@ import datetime
 import requests
 from requests import RequestException
 from requests import HTTPError
-import ParameterException
+from ParameterException import ParameterException
 import json
 
 '''
@@ -18,6 +18,7 @@ import json
 class Device42Svc:
     def __init__(self, filename):
         self.logger = self.config_logs()
+        cfg_filename = ''
         if len(sys.argv) > 1:
             cfg_filename = sys.argv[1]
             print cfg_filename
@@ -44,32 +45,49 @@ class Device42Svc:
                 self.devices_rack_url = config.get('credentials', 'DEVICES_RACK_URL')
                 self.hardware_model = config.get('credentials', 'HARDWARE_MODEL')
                 self.is_cache = config.get('credentials', 'IS_CACHE')
+                self.buildings_cache = config.get('credentials', 'BUILDINGS_CACHE')
+                self.rooms_cache = config.get('credentials', 'ROOMS_CACHE')
+                self.racks_cache = config.get('credentials', 'RACKS_CACHE')
+                self.hardware_cache = config.get('credentials', 'HARDWARE_CACHE')
+                self.devices_cache = config.get('credentials', 'DEVICES_CACHE')
                 if self.is_cache:
-                    self.update_cache()
+                    self.update_cache(self.buildings_cache, self.buildings_url)
+                    self.update_cache(self.racks_cache, self.racks_url)
+                    self.update_cache(self.hardware_cache, self.hardware_model)
+                    self.update_cache(self.rooms_cache, self.rooms_url)
+                    self.update_cache(self.devices_cache, self.devices_url)
 
             except ConfigParser.Error as err:
                 self.logger.error(err)
         else:
             self.logger.info("please provide config file name")
 
-    def update_cache(self):
-        path = os.getcwd()
-        buildings_file_path = path + "/cache/buildings_cache.json"
-        response = self.get_method(self.buildings_url)
-        print response.json()
+    def update_cache(self, file_path, url):
+        path = os.getcwd() + file_path
+        response = self.get_method(url)
         if response.status_code == 200:
-            if os.path.getsize(buildings_file_path) == 0:
-                print "entered if"
-                with open(buildings_file_path, 'w') as f:
-                    json.dump(response.json(), f)
+            if os.path.getsize(path) == 0:
+                with open(path, 'w') as f:
+                    json.dump(response.json(), f, indent=4, sort_keys=True)
             else:
                 output = response.json()
-                with open(buildings_file_path, 'r') as f:
+                with open(path, 'r') as f:
                     data = json.load(f)
                 if output['total_count'] == data['total_count']:
                     self.logger.info("up to date")
         else:
             print "invalid response"
+
+    @staticmethod
+    def read_from_cache(file_path):
+        with open(file_path, 'r') as f:
+            response = json.load(f)
+        return response
+
+    @staticmethod
+    def write_to_cache(file_path, data):
+        with open(file_path, 'w') as f:
+            json.dump(data, f, indent=4, sort_keys=True)
 
     @staticmethod
     def config_logs():
@@ -109,8 +127,7 @@ class Device42Svc:
         Getting all buildings information
         """
         if self.is_cache:
-            with open(os.getcwd()+"/cache/buildings_cache.json", 'r') as f:
-                response = json.load(f)
+            response = self.read_from_cache(os.getcwd() + self.buildings_cache)
         else:
             response = self.get_method(self.buildings_url)
         return response
@@ -119,31 +136,43 @@ class Device42Svc:
         """
         Getting all rooms information from device42 application using get request
         """
-        response = self.get_method(self.rooms_url)
+        if self.is_cache:
+            response = self.read_from_cache(os.getcwd() + self.rooms_cache)
+        else:
+            response = self.get_method(self.rooms_url)
         return response
 
     def get_all_racks(self):
         """
         Getting all racks information from device42 application using get request
         """
-        response = self.get_method(self.racks_url)
+        if self.is_cache:
+            response = self.read_from_cache(os.getcwd() + self.racks_cache)
+        else:
+            response = self.get_method(self.racks_url)
         return response
 
     def get_all_models(self):
         """
         Getting all hardware models information from device42 application using get request
         """
-        response = self.get_method(self.hardware_model)
+        if self.is_cache:
+            response = self.read_from_cache(os.getcwd() + self.hardware_cache)
+        else:
+            response = self.get_method(self.hardware_model)
         return response
 
     def get_all_devices(self):
         """
         Getting all devices information from device42 application using get request
         """
-        response = self.get_method(self.devices_url)
+        if self.is_cache:
+            response = self.read_from_cache(os.getcwd() + self.devices_cache)
+        else:
+            response = self.get_method(self.devices_url)
         return response
 
-    def post_method(self, url, payload):
+    def post_method(self, url, payload, file_path):
         """
         Generic method for post
         :return:
@@ -152,10 +181,11 @@ class Device42Svc:
             response = requests.post(url, auth=(self.user, self.password),
                                      verify=False, data=payload)
             self.logger.info(response)
+            if response.status_code == 200:
+                self.write_to_cache(file_path, payload)
             return response
-        except requests.exceptions.RequestException as err:
+        except RequestException as err:
             self.logger.error(err)
-            raise
 
     def post_building(self, payload):
         """
@@ -163,9 +193,9 @@ class Device42Svc:
         """
         try:
             self.check_params('building', payload)
-        except ParameterException.ParameterException as err:
+        except ParameterException as err:
             self.logger.error(err)
-        response = self.post_method(self.buildings_url, payload)
+        response = self.post_method(self.buildings_url, payload, os.getcwd()+self.buildings_cache)
         return response
 
     def post_room(self, payload):
@@ -180,9 +210,9 @@ class Device42Svc:
                 if not is_found:
                     building_dict = {'name': payload['building']}
                     self.post_building(building_dict)
-            response = self.post_method(self.rooms_url, payload)
+            response = self.post_method(self.rooms_url, payload, os.getcwd() + self.rooms_cache)
             return response
-        except (requests.exceptions.RequestException, ParameterException.ParameterException) as err:
+        except (RequestException, HTTPError, ParameterException) as err:
             self.logger.error(err)
             raise err
 
@@ -200,24 +230,21 @@ class Device42Svc:
                     self.post_room(room_dict)
             if 'size' not in payload:
                 payload['size'] = 42
-            response = requests.post(self.racks_url, auth=(self.user, self.password),
-                                     verify=False, data=payload)
+            response = self.post_method(self.racks_url, payload, os.getcwd() + self.rooms_cache)
             self.logger.info(response)
             return response
-        except requests.exceptions.RequestException as err:
+        except (RequestException, HTTPError, ParameterException) as err:
             self.logger.error(err)
-            raise
 
     def post_hardware_model(self, payload):
         """
                 Create a hardware model with given data in device42 using POST
         """
         try:
-            response = requests.post(self.hardware_model, auth=(self.user, self.password),
-                                     verify=False, data=payload)
+            response = self.post_method(self.hardware_model, payload, os.getcwd()+self.hardware_cache)
             self.logger.info(response)
             return response
-        except requests.exceptions.RequestException as err:
+        except RequestException as err:
             self.logger.error(err)
             raise
 
@@ -244,11 +271,10 @@ class Device42Svc:
             if 'start_at' not in payload:
                 payload['start_at'] = 'auto'
 
-            response = requests.post(self.devices_rack_url, auth=(self.user, self.password),
-                                     verify=False, data=payload)
+            response = self.post_method(self.devices_rack_url, payload, os.getcwd()+self.devices_cache)
             self.logger.info(response)
             return response
-        except requests.exceptions.RequestException as err:
+        except RequestException as err:
             self.logger.error(err)
 
     def post_device(self, payload):
@@ -266,11 +292,10 @@ class Device42Svc:
                 if not is_found:
                     hardware_dict = {'name': payload['hardware']}
                     self.post_hardware_model(hardware_dict)
-            response = requests.post(self.devices_url, auth=(self.user, self.password),
-                                     verify=False, data=payload)
+            response = self.post_method(self.devices_url, payload, os.getcwd()+self.devices_cache)
             self.logger.info(response)
             return response
-        except requests.exceptions.RequestException as err:
+        except (RequestException, ParameterException) as err:
             self.logger.error(err)
 
     def check_params(self, type_of_payload, payload):
@@ -286,7 +311,7 @@ class Device42Svc:
                 msg = "missing required parameters " + type_of_payload + " name"
         if not msg == "Success":
             self.logger.info(msg)
-            raise ParameterException.ParameterException(msg)
+            raise ParameterException(msg)
 
     @staticmethod
     def is_building_exists(buildings, building_name):
