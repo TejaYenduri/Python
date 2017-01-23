@@ -25,11 +25,11 @@ class Device42Svc:
             if len(sys.argv) == 3:
                 self.csv_filename = sys.argv[2]
             else:
-                self.csv_filename = 'deviceHard.csv'
+                self.csv_filename = ''
         if not filename == '':
             cfg_filename = filename
             print cfg_filename
-            self.csv_filename = 'deviceHard.csv'
+            self.csv_filename = ''
 
         if cfg_filename != '' and os.path.isfile(cfg_filename) and cfg_filename.endswith('.cfg'):
             try:
@@ -375,10 +375,15 @@ class Device42Svc:
         """
         if os.path.isfile(filename) and filename != '' and filename.endswith('.csv'):
             try:
-                file_object = open(filename, 'r')
-                records = csv.DictReader(file_object)
+                with open(self.csv_filename) as file_handler:
+                    keys_string = file_handler.readline()
+                    if keys_string:
+                        keys_string = keys_string.lower()
+                        keys = keys_string.split(',')
 
-                for record in records:
+                    for line in self.read_from_csv(file_handler):
+                        values = line.split(',')
+                        record = dict(zip(keys, values))
                     try:
                         response = self.post_building(record)
                         self.logger.info(response)
@@ -390,31 +395,51 @@ class Device42Svc:
         else:
             print "invalid file"
 
+    def read_from_csv(self, file_object):
+        while True:
+            data = file_object.readline()
+            if not data:
+                break
+            yield data
+
     def post_devices_csv(self):
         """
          Read data from csv file and create a building in device42 using POST
         """
         if os.path.isfile(self.csv_filename) and self.csv_filename != '' and self.csv_filename.endswith('.csv'):
             try:
-                file_object = open(self.csv_filename, 'r')
-                records = csv.DictReader(file_object)
+                with open(self.csv_filename) as file_handler:
+                    keys_string = file_handler.readline()
+                    if keys_string:
+                        keys_string = keys_string.lower()
+                        keys = keys_string.split(',')
 
-                for record in records:
-                    try:
-                        record = dict((k.lower(), v) for k, v in record.iteritems())
-                        if 'building' or 'rack_id' in record and \
-                                record['building'] or record['rack_id'] is not None:
-                            response = self.post_device_rack(record)
-                            self.logger.info(response)
-                        else:
-                            response = self.post_device(record)
-                            self.logger.info(response)
-                    except requests.exceptions.RequestException as err:
-                        print err
-            except csv.Error as err:
+                    for line in self.read_from_csv(file_handler):
+                        values = line.split(',')
+                        record = dict(zip(keys, values))
+                        try:
+                            if 'building' or 'rack_id' in record and \
+                                    record['building'] or record['rack_id'] is not None:
+                                response = self.post_device_rack(record)
+                                self.logger.info(response)
+                            else:
+                                response = self.post_device(record)
+                                self.logger.info(response)
+                            return response
+                        except (RequestException, ParameterException) as err:
+                            self.logger.info(err)
+            except (IOError, OSError) as err:
                 self.logger.error(err)
         else:
-            print "invalid file"
+            self.logger.info("invalid file. upload .csv file")
+
+    def post_file_data(self, filename):
+        self.csv_filename = filename
+        response = self.post_devices_csv()
+        if response.status_code == 200:
+            return True
+        else:
+            return False
 
     def delete_method_using_id(self, url, entity_id):
         try:
