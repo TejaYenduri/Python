@@ -1,1 +1,38 @@
-{"total_count": 2, "buildings": [{"name": "main office", "notes": "super critical", "address": "123 main st", "contact_name": "roger", "building_id": 1, "contact_phone": "1234567890", "custom_fields": []}, {"name": "Las Vegas Office", "notes": "super critical", "address": "879 main st", "contact_name": "roger", "building_id": 2, "contact_phone": "1234567890", "custom_fields": []}], "limit": 1000, "offset": 0}
+[
+    {
+        "address": "123 main st", 
+        "building_id": 1, 
+        "contact_name": "roger", 
+        "contact_phone": "1234567890", 
+        "custom_fields": [], 
+        "name": "main office", 
+        "notes": "super critical"
+    }, 
+    {
+        "address": "879 main st", 
+        "building_id": 2, 
+        "contact_name": "roger", 
+        "contact_phone": "1234567890", 
+        "custom_fields": [], 
+        "name": "Las Vegas Office", 
+        "notes": "super critical"
+    }, 
+    {
+        "address": "456 main st", 
+        "building_id": 3, 
+        "contact_name": "roger", 
+        "contact_phone": "1234567890", 
+        "custom_fields": [], 
+        "name": "Palm Beach Bldg", 
+        "notes": "super critical"
+    }, 
+    {
+        "address": "012 main st", 
+        "building_id": 5, 
+        "contact_name": "roger", 
+        "contact_phone": "1234567890", 
+        "custom_fields": [], 
+        "name": "Florida Beach Bldg", 
+        "notes": "super critical"
+    }
+]

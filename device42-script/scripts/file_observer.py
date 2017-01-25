@@ -28,8 +28,8 @@ class NewFileHandler(PatternMatchingEventHandler):
 
     def _call_api(self, event):
         file_name = event.src_path
-        device42 = Device42Svc('credentials.cfg')
-        success = device42.post_file_data(file_name)
+        device42 = Device42Svc('../credentials.cfg')
+        success = device42.post_devices_csv(file_name)
         print file_name
         return success
 

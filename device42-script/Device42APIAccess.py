@@ -1,6 +1,5 @@
 import ConfigParser
 import os
-import sys
 import csv
 import logging
 import datetime
@@ -17,20 +16,9 @@ import json
 
 class Device42Svc:
     def __init__(self, filename):
-        self.logger = self.config_logs()
-        cfg_filename = ''
-        if len(sys.argv) > 1:
-            cfg_filename = sys.argv[1]
-            print cfg_filename
-            if len(sys.argv) == 3:
-                self.csv_filename = sys.argv[2]
-            else:
-                self.csv_filename = ''
-        if not filename == '':
-            cfg_filename = filename
-            print cfg_filename
-            self.csv_filename = ''
 
+        cfg_filename = filename
+        self.logger = self.config_logs()
         if cfg_filename != '' and os.path.isfile(cfg_filename) and cfg_filename.endswith('.cfg'):
             try:
                 config = ConfigParser.SafeConfigParser()
@@ -51,24 +39,39 @@ class Device42Svc:
                 self.hardware_cache = config.get('credentials', 'HARDWARE_CACHE')
                 self.devices_cache = config.get('credentials', 'DEVICES_CACHE')
                 if self.is_cache:
-                    self.update_cache(self.buildings_cache, self.buildings_url)
-                    self.update_cache(self.racks_cache, self.racks_url)
-                    self.update_cache(self.hardware_cache, self.hardware_model)
-                    self.update_cache(self.rooms_cache, self.rooms_url)
-                    self.update_cache(self.devices_cache, self.devices_url)
+                    self.update_cache(self.buildings_cache, self.buildings_url, "buildings")
+                    self.update_cache(self.racks_cache, self.racks_url, "racks")
+                    self.update_cache(self.hardware_cache, self.hardware_model, "models")
+                    self.update_cache(self.rooms_cache, self.rooms_url, "rooms")
+                    self.update_cache(self.devices_cache, self.devices_url, "Devices")
 
             except ConfigParser.Error as err:
                 self.logger.error(err)
         else:
             self.logger.info("please provide config file name")
 
-    def update_cache(self, file_path, url):
+    def update_cache(self, file_path, url, type_of):
         path = os.getcwd() + file_path
         response = self.get_method(url)
         if response.status_code == 200:
-            with open(path, 'w') as f:
-                json.dump(response.json(), f, indent=4, sort_keys=True)
-                self.logger.info("cache up to date")
+            response.encoding = 'utf-8'
+            output = response.json()
+            if os.path.exists(path) and os.path.getsize(path) > 0:
+                cache_data = self.read_from_cache(path)
+                if cache_data == output:
+                    self.logger.info("cache up to date")
+                else:
+                    records_list = output[type_of]
+                    records = [a for a in records_list if (a not in cache_data)]
+                    for record in records:
+                        cache_data.append(record)
+                    with open(path, "w") as file_object:
+                        json.dump(cache_data, file_object, indent=4, sort_keys=True)
+                    self.logger.info("updated cache")
+            else:
+                with open(path, 'w') as f:
+                    json.dump(output[type_of], f, indent=4, sort_keys=True, ensure_ascii=False)
+                    self.logger.info("created and updated cache")
         else:
             self.logger.info(response)
 
@@ -80,8 +83,10 @@ class Device42Svc:
 
     @staticmethod
     def write_to_cache(file_path, data):
-        with open(file_path, 'w') as f:
-            json.dump(data, f, indent=4, sort_keys=True)
+        response = Device42Svc.read_from_cache(file_path)
+        response.append(data)
+        with open(file_path, "w") as file_object:
+            json.dump(data, file_object, indent=4, sort_keys=True)
 
     @staticmethod
     def config_logs():
@@ -198,14 +203,26 @@ class Device42Svc:
         """
         try:
             self.check_params('room', payload)
+            building_response = None
+            response = None
             if 'building' in payload and payload['building'] != '' or payload['building'] is not None:
                 buildings = self.get_all_buildings()
                 is_found = self.is_building_exists(buildings, payload['building'])
                 if not is_found:
                     building_dict = {'name': payload['building']}
-                    self.post_building(building_dict)
-            response = self.post_method(self.rooms_url, payload, os.getcwd() + self.rooms_cache)
-            return response
+                    building_response = self.post_building(building_dict)
+                    if building_response.status_code == 200:
+                        response = self.post_method(self.rooms_url, payload, os.getcwd() + self.rooms_cache)
+            else:
+                response = self.post_method(self.rooms_url, payload, os.getcwd() + self.rooms_cache)
+            if response.status_code == 200:
+                return response
+            else:
+                if building_response is not None and building_response.status_code == 200:
+                    building_id = building_response.json()["msg"][1]
+                    print building_id
+                    self.delete_method_using_id(self.buildings_url, building_id)
+
         except (RequestException, HTTPError, ParameterException) as err:
             self.logger.error(err)
             raise err
@@ -375,8 +392,10 @@ class Device42Svc:
         """
         if os.path.isfile(filename) and filename != '' and filename.endswith('.csv'):
             try:
-                with open(self.csv_filename) as file_handler:
+                with open(filename) as file_handler:
                     keys_string = file_handler.readline()
+                    keys = []
+                    record = {}
                     if keys_string:
                         keys_string = keys_string.lower()
                         keys = keys_string.split(',')
@@ -395,21 +414,26 @@ class Device42Svc:
         else:
             print "invalid file"
 
-    def read_from_csv(self, file_object):
+    @staticmethod
+    def read_from_csv(file_object):
         while True:
             data = file_object.readline()
             if not data:
                 break
             yield data
 
-    def post_devices_csv(self):
+    def post_devices_csv(self, filename=None):
         """
          Read data from csv file and create a building in device42 using POST
         """
-        if os.path.isfile(self.csv_filename) and self.csv_filename != '' and self.csv_filename.endswith('.csv'):
+        if os.path.isfile(filename) and filename != '' and filename.endswith('.csv'):
+            print filename
+            success = False
             try:
-                with open(self.csv_filename) as file_handler:
+                with open(filename) as file_handler:
                     keys_string = file_handler.readline()
+                    count = 0
+                    keys = []
                     if keys_string:
                         keys_string = keys_string.lower()
                         keys = keys_string.split(',')
@@ -425,21 +449,19 @@ class Device42Svc:
                             else:
                                 response = self.post_device(record)
                                 self.logger.info(response)
-                            return response
+                            if response is not None and response.status_code == 200:
+                                count += 1
+                            else:
+                                self.logger.info(str(record) + " not inserted")
                         except (RequestException, ParameterException) as err:
                             self.logger.info(err)
+                    if count >= 1:
+                        success = True
+                return success
             except (IOError, OSError) as err:
                 self.logger.error(err)
         else:
             self.logger.info("invalid file. upload .csv file")
-
-    def post_file_data(self, filename):
-        self.csv_filename = filename
-        response = self.post_devices_csv()
-        if response.status_code == 200:
-            return True
-        else:
-            return False
 
     def delete_method_using_id(self, url, entity_id):
         try:
