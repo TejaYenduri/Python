@@ -62,6 +62,7 @@ class Device42Svc:
                     self.logger.info("cache up to date")
                 else:
                     records_list = output[type_of]
+                    print type(records_list), type(cache_data)
                     records = [a for a in records_list if (a not in cache_data)]
                     for record in records:
                         cache_data.append(record)
@@ -125,50 +126,35 @@ class Device42Svc:
         """
         Getting all buildings information
         """
-        if self.is_cache:
-            response = self.read_from_cache(os.getcwd() + self.buildings_cache)
-        else:
-            response = self.get_method(self.buildings_url)
+        response = self.get_method(self.buildings_url)
         return response
 
     def get_all_rooms(self):
         """
         Getting all rooms information from device42 application using get request
         """
-        if self.is_cache:
-            response = self.read_from_cache(os.getcwd() + self.rooms_cache)
-        else:
-            response = self.get_method(self.rooms_url)
+        response = self.get_method(self.rooms_url)
         return response
 
     def get_all_racks(self):
         """
         Getting all racks information from device42 application using get request
         """
-        if self.is_cache:
-            response = self.read_from_cache(os.getcwd() + self.racks_cache)
-        else:
-            response = self.get_method(self.racks_url)
+        response = self.get_method(self.racks_url)
         return response
 
     def get_all_models(self):
         """
         Getting all hardware models information from device42 application using get request
         """
-        if self.is_cache:
-            response = self.read_from_cache(os.getcwd() + self.hardware_cache)
-        else:
-            response = self.get_method(self.hardware_model)
+        response = self.get_method(self.hardware_model)
         return response
 
     def get_all_devices(self):
         """
         Getting all devices information from device42 application using get request
         """
-        if self.is_cache:
-            response = self.read_from_cache(os.getcwd() + self.devices_cache)
-        else:
-            response = self.get_method(self.devices_url)
+        response = self.get_method(self.devices_url)
         return response
 
     def post_method(self, url, payload, file_path):
@@ -191,7 +177,7 @@ class Device42Svc:
         Create a building with given data in device42 using POST
         """
         try:
-            self.check_params('building', payload)
+            self.check_params(payload, {'name'})
         except ParameterException as err:
             self.logger.error(err)
         response = self.post_method(self.buildings_url, payload, os.getcwd() + self.buildings_cache)
@@ -202,10 +188,11 @@ class Device42Svc:
         Create a room with given data in device42 using POST
         """
         try:
-            self.check_params('room', payload)
+
             building_response = None
             response = None
-            if 'building' in payload and payload['building'] != '' or payload['building'] is not None:
+            if payload['building']:
+                self.check_params(payload, {'name', 'building'})
                 buildings = self.get_all_buildings()
                 is_found = self.is_building_exists(buildings, payload['building'])
                 if not is_found:
@@ -214,6 +201,7 @@ class Device42Svc:
                     if building_response.status_code == 200:
                         response = self.post_method(self.rooms_url, payload, os.getcwd() + self.rooms_cache)
             else:
+                self.check_params(payload, {'name', 'building_id'})
                 response = self.post_method(self.rooms_url, payload, os.getcwd() + self.rooms_cache)
             if response.status_code == 200:
                 return response
@@ -232,18 +220,34 @@ class Device42Svc:
         Create a rack with given data in device42 using POST
         """
         try:
-            self.check_params('rack', payload)
-            if 'room' in payload and (payload['room'] != '' or payload['room'] is not None):
+            is_found = False
+            response = None
+            if 'size' not in payload:
+                payload['size'] = 42
+            if payload['building']:
+                self.check_params(payload, {'room', 'building', 'name', 'size'})
                 rooms = self.get_all_rooms()
                 room_dict = {'name': payload['room'], 'building': payload['building']}
                 is_found = self.is_room_exists(rooms, room_dict)
                 if not is_found:
-                    self.post_room(room_dict)
-            if 'size' not in payload:
-                payload['size'] = 42
+                    room_response = self.post_room(room_dict)
+                    if room_response.status_code == 200:
+                        response = self.post_method(self.racks_url, payload, os.getcwd() + self.rooms_cache)
+                        if response.status_code == 200:
+                            return response
+                        else:
+                            room_id = room_response.json()["msg"][1]
+                            self.logger.info(room_id)
+                            self.delete_method_using_id(self.rooms_url, room_id)
+                            if not self.is_cache:
+                                building_id = self.get_id(payload['building'], self.buildings_url, "buildings", "building_id")
+                                self.delete_method_using_id(self.buildings_url, building_id)
+
+            self.check_params(payload, {'name', 'size'})
             response = self.post_method(self.racks_url, payload, os.getcwd() + self.rooms_cache)
             self.logger.info(response)
-            return response
+            if response.status_code == 200:
+                return response
         except (RequestException, HTTPError, ParameterException) as err:
             self.logger.error(err)
 
@@ -252,10 +256,11 @@ class Device42Svc:
                 Create a hardware model with given data in device42 using POST
         """
         try:
+            self.check_params(payload, {'name'})
             response = self.post_method(self.hardware_model, payload, os.getcwd() + self.hardware_cache)
             self.logger.info(response)
             return response
-        except RequestException as err:
+        except (RequestException, ParameterException) as err:
             self.logger.error(err)
             raise
 
@@ -264,27 +269,35 @@ class Device42Svc:
         Create a device with given data in device42 using POST
         """
         try:
-            if 'hw_model' in payload and \
-                    (payload['hw_model'] != '' and payload['hw_model'] is not None):
+            if payload['hw_model']:
+                self.check_params(payload, {'hw_model'})
                 models = self.get_all_models()
                 is_found = self.is_hardware_exists(models, payload['hw_model'])
                 if not is_found:
                     hardware_dict = {'name': payload['hw_model']}
                     self.post_hardware_model(hardware_dict)
-
-            if 'rack' in payload and payload['rack'] != '' or payload['rack'] is not None:
+            if 'start_at' not in payload:
+                payload['start_at'] = 'auto'
+            is_found = False
+            if payload['building']:
+                self.check_params(payload, {'device', 'room', 'building', 'start_at'})
                 racks = self.get_all_racks()
                 rack_dict = {'name': payload['rack'], 'room': payload['room'],
                              'building': payload['building']}
                 is_found = self.is_rack_exists(racks, rack_dict)
-                if not is_found:
-                    self.post_rack(rack_dict)
-            if 'start_at' not in payload:
-                payload['start_at'] = 'auto'
-
-            response = self.post_method(self.devices_rack_url, payload, os.getcwd() + self.devices_cache)
-            self.logger.info(response)
-            return response
+            if is_found or payload['rack_id']:
+                self.check_params(payload, {'device', 'rack_id', 'start_at'})
+                response = self.post_method(self.devices_rack_url, payload, os.getcwd() + self.devices_cache)
+                self.logger.info(response)
+                return response
+            if not is_found:
+                rack_response = self.post_rack(rack_dict)
+                if rack_response.status_code == 200:
+                    response = self.post_method(self.devices_rack_url, payload, os.getcwd() + self.devices_cache)
+                    if response.status_code == 200:
+                        return response
+                    else:
+                        self.delete_method_using_id(self.racks_url, rack_response.json()["msg"][1])
         except RequestException as err:
             self.logger.error(err)
 
@@ -295,9 +308,9 @@ class Device42Svc:
         :return:
         """
         try:
-            self.check_params('device', payload)
-            if 'hardware' in payload and (payload['hardware'] != ''
-                                          and payload['hardware'] is not None):
+            self.check_params(payload, {'name'})
+            if payload['hardware']:
+                self.check_params(payload, {'hardware'})
                 models = self.get_all_models()
                 is_found = self.is_hardware_exists(models, payload['hardware'])
                 if not is_found:
@@ -309,17 +322,10 @@ class Device42Svc:
         except (RequestException, ParameterException) as err:
             self.logger.error(err)
 
-    def check_params(self, type_of_payload, payload):
+    def check_params(self, payload, required_params):
         msg = "Success"
-        if type_of_payload is 'building':
-            if not payload['name']:
-                msg = "missing required parameter building name"
-        if type_of_payload is 'room':
-            if not payload['name'] and (payload['building_id'] or payload['building']):
-                msg = "missing required parameters room name, building or building_id"
-        if type_of_payload is 'rack' or 'device':
-            if not payload['name']:
-                msg = "missing required parameters " + type_of_payload + " name"
+        if not all(key in payload and (payload[key] not in [None, '']) for key in required_params):
+            msg = "missing required parameters " + str(required_params)
         if not msg == "Success":
             self.logger.info(msg)
             raise ParameterException(msg)
@@ -384,6 +390,16 @@ class Device42Svc:
                 is_found = True
                 break
         return is_found
+
+    def get_id(self, name, url, type_of, id_type):
+        response = self.get_method(url)
+        if response.status_code == 200:
+            output =response.json()
+            for i in xrange(len(output[type_of])):
+                if output[type_of]['name'] == name:
+                    return output[type_of][id_type]
+        return -1
+
 
     def post_buildings_csv(self, filename):
 
@@ -486,7 +502,6 @@ class Device42Svc:
         """
         response = self.delete_method_using_id(self.devices_url, device_id)
         return response
-
 
 d42 = Device42Svc('credentials.cfg')
 d42.get_all_buildings()

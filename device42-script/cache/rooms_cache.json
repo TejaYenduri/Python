@@ -1,3 +1,10 @@
-{
-    "rooms": []
-}
+[
+    {
+        "building": "main office", 
+        "building_id": 1, 
+        "custom_fields": [], 
+        "name": "2nd Floor", 
+        "notes": "super critical", 
+        "room_id": 1
+    }
+]

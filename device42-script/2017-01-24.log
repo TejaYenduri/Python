@@ -1,0 +1,372 @@
+2017-01-24 00:00:45,670 - __main__ - INFO - <Response [200]>
+2017-01-24 00:00:45,671 - __main__ - INFO - cache up to date
+2017-01-24 00:00:45,776 - __main__ - INFO - <Response [200]>
+2017-01-24 00:00:45,777 - __main__ - INFO - cache up to date
+2017-01-24 00:00:45,995 - __main__ - INFO - <Response [200]>
+2017-01-24 00:00:45,996 - __main__ - INFO - cache up to date
+2017-01-24 00:00:46,110 - __main__ - INFO - <Response [200]>
+2017-01-24 00:00:46,111 - __main__ - INFO - cache up to date
+2017-01-24 00:00:46,242 - __main__ - INFO - <Response [200]>
+2017-01-24 00:00:46,243 - __main__ - INFO - cache up to date
+2017-01-24 00:03:45,122 - __main__ - INFO - <Response [200]>
+2017-01-24 00:03:45,123 - __main__ - INFO - cache up to date
+2017-01-24 00:03:45,255 - __main__ - INFO - <Response [200]>
+2017-01-24 00:03:45,255 - __main__ - INFO - cache up to date
+2017-01-24 00:03:45,380 - __main__ - INFO - <Response [200]>
+2017-01-24 00:03:45,380 - __main__ - INFO - cache up to date
+2017-01-24 00:03:45,496 - __main__ - INFO - <Response [200]>
+2017-01-24 00:03:45,497 - __main__ - INFO - cache up to date
+2017-01-24 00:03:45,640 - __main__ - INFO - <Response [200]>
+2017-01-24 00:03:45,640 - __main__ - INFO - cache up to date
+2017-01-24 00:09:03,460 - __main__ - INFO - <Response [200]>
+2017-01-24 00:13:22,502 - __main__ - INFO - <Response [200]>
+2017-01-24 00:13:22,504 - __main__ - INFO - cache up to date
+2017-01-24 00:13:22,647 - __main__ - INFO - <Response [200]>
+2017-01-24 00:13:22,648 - __main__ - INFO - cache up to date
+2017-01-24 00:13:22,760 - __main__ - INFO - <Response [200]>
+2017-01-24 00:13:22,761 - __main__ - INFO - cache up to date
+2017-01-24 00:13:22,915 - __main__ - INFO - <Response [200]>
+2017-01-24 00:13:22,916 - __main__ - INFO - cache up to date
+2017-01-24 00:13:23,036 - __main__ - INFO - <Response [200]>
+2017-01-24 00:13:23,036 - __main__ - INFO - cache up to date
+2017-01-24 08:13:09,652 - __main__ - INFO - <Response [200]>
+2017-01-24 08:13:09,653 - __main__ - INFO - cache up to date
+2017-01-24 08:13:09,748 - __main__ - INFO - <Response [200]>
+2017-01-24 08:13:09,749 - __main__ - INFO - cache up to date
+2017-01-24 08:13:09,900 - __main__ - INFO - <Response [200]>
+2017-01-24 08:13:09,901 - __main__ - INFO - cache up to date
+2017-01-24 08:13:10,050 - __main__ - INFO - <Response [200]>
+2017-01-24 08:13:10,050 - __main__ - INFO - cache up to date
+2017-01-24 08:13:10,212 - __main__ - INFO - <Response [200]>
+2017-01-24 08:13:10,213 - __main__ - INFO - cache up to date
+2017-01-24 08:14:12,792 - __main__ - INFO - <Response [200]>
+2017-01-24 08:14:12,793 - __main__ - INFO - cache up to date
+2017-01-24 08:14:12,893 - __main__ - INFO - <Response [200]>
+2017-01-24 08:14:12,894 - __main__ - INFO - cache up to date
+2017-01-24 08:14:13,005 - __main__ - INFO - <Response [200]>
+2017-01-24 08:14:13,005 - __main__ - INFO - cache up to date
+2017-01-24 08:14:13,114 - __main__ - INFO - <Response [200]>
+2017-01-24 08:14:13,115 - __main__ - INFO - cache up to date
+2017-01-24 08:14:13,247 - __main__ - INFO - <Response [200]>
+2017-01-24 08:14:13,247 - __main__ - INFO - cache up to date
+2017-01-24 08:30:25,975 - __main__ - INFO - <Response [200]>
+2017-01-24 08:30:26,089 - __main__ - INFO - <Response [200]>
+2017-01-24 08:30:26,191 - __main__ - INFO - <Response [200]>
+2017-01-24 08:30:26,296 - __main__ - INFO - <Response [200]>
+2017-01-24 08:30:26,430 - __main__ - INFO - <Response [200]>
+2017-01-24 08:30:53,558 - __main__ - INFO - <Response [200]>
+2017-01-24 08:32:58,750 - __main__ - INFO - <Response [200]>
+2017-01-24 08:43:20,874 - __main__ - INFO - <Response [200]>
+2017-01-24 08:53:23,994 - __main__ - INFO - <Response [200]>
+2017-01-24 09:04:21,871 - __main__ - INFO - <Response [200]>
+2017-01-24 09:06:02,008 - __main__ - INFO - <Response [200]>
+2017-01-24 09:09:08,978 - __main__ - INFO - <Response [200]>
+2017-01-24 09:09:08,979 - __main__ - INFO - created and updated cache
+2017-01-24 09:09:09,093 - __main__ - INFO - <Response [200]>
+2017-01-24 09:09:09,094 - __main__ - INFO - created and updated cache
+2017-01-24 09:09:09,206 - __main__ - INFO - <Response [200]>
+2017-01-24 09:09:09,206 - __main__ - INFO - created and updated cache
+2017-01-24 09:09:09,345 - __main__ - INFO - <Response [200]>
+2017-01-24 09:09:09,346 - __main__ - INFO - created and updated cache
+2017-01-24 09:09:09,495 - __main__ - INFO - <Response [200]>
+2017-01-24 09:09:09,495 - __main__ - INFO - created and updated cache
+2017-01-24 09:13:49,567 - __main__ - INFO - <Response [200]>
+2017-01-24 09:13:49,571 - __main__ - INFO - updated cache
+2017-01-24 09:13:49,686 - __main__ - INFO - <Response [200]>
+2017-01-24 09:13:49,688 - __main__ - INFO - cache up to date
+2017-01-24 09:13:49,781 - __main__ - INFO - <Response [200]>
+2017-01-24 09:13:49,783 - __main__ - INFO - cache up to date
+2017-01-24 09:13:49,879 - __main__ - INFO - <Response [200]>
+2017-01-24 09:13:49,881 - __main__ - INFO - cache up to date
+2017-01-24 09:13:50,046 - __main__ - INFO - <Response [200]>
+2017-01-24 09:13:50,047 - __main__ - INFO - cache up to date
+2017-01-24 09:15:32,077 - __main__ - INFO - <Response [200]>
+2017-01-24 09:15:32,079 - __main__ - INFO - updated cache
+2017-01-24 09:15:32,239 - __main__ - INFO - <Response [200]>
+2017-01-24 09:15:32,240 - __main__ - INFO - cache up to date
+2017-01-24 09:15:32,347 - __main__ - INFO - <Response [200]>
+2017-01-24 09:15:32,348 - __main__ - INFO - cache up to date
+2017-01-24 09:15:32,487 - __main__ - INFO - <Response [200]>
+2017-01-24 09:15:32,489 - __main__ - INFO - cache up to date
+2017-01-24 09:15:32,649 - __main__ - INFO - <Response [200]>
+2017-01-24 09:15:32,650 - __main__ - INFO - cache up to date
+2017-01-24 09:17:40,166 - __main__ - INFO - <Response [200]>
+2017-01-24 09:17:40,169 - __main__ - INFO - updated cache
+2017-01-24 09:17:40,290 - __main__ - INFO - <Response [200]>
+2017-01-24 09:17:40,292 - __main__ - INFO - cache up to date
+2017-01-24 09:17:40,405 - __main__ - INFO - <Response [200]>
+2017-01-24 09:17:40,406 - __main__ - INFO - cache up to date
+2017-01-24 09:17:40,582 - __main__ - INFO - <Response [200]>
+2017-01-24 09:17:40,584 - __main__ - INFO - cache up to date
+2017-01-24 09:17:40,763 - __main__ - INFO - <Response [200]>
+2017-01-24 09:17:40,766 - __main__ - INFO - cache up to date
+2017-01-24 09:18:26,579 - __main__ - INFO - <Response [200]>
+2017-01-24 09:18:26,582 - __main__ - INFO - updated cache
+2017-01-24 09:18:26,699 - __main__ - INFO - <Response [200]>
+2017-01-24 09:18:26,701 - __main__ - INFO - cache up to date
+2017-01-24 09:18:26,804 - __main__ - INFO - <Response [200]>
+2017-01-24 09:18:26,807 - __main__ - INFO - cache up to date
+2017-01-24 09:18:26,918 - __main__ - INFO - <Response [200]>
+2017-01-24 09:18:26,920 - __main__ - INFO - cache up to date
+2017-01-24 09:18:27,079 - __main__ - INFO - <Response [200]>
+2017-01-24 09:18:27,081 - __main__ - INFO - cache up to date
+2017-01-24 09:27:06,613 - __main__ - INFO - <Response [200]>
+2017-01-24 09:31:43,416 - __main__ - INFO - <Response [200]>
+2017-01-24 09:43:26,703 - __main__ - INFO - <Response [200]>
+2017-01-24 09:50:22,703 - __main__ - INFO - <Response [200]>
+2017-01-24 09:51:01,716 - __main__ - INFO - <Response [200]>
+2017-01-24 09:51:22,065 - __main__ - INFO - <Response [200]>
+2017-01-24 09:54:34,665 - __main__ - INFO - <Response [200]>
+2017-01-24 09:55:42,150 - __main__ - INFO - <Response [200]>
+2017-01-24 09:58:12,363 - __main__ - INFO - <Response [200]>
+2017-01-24 09:59:10,630 - __main__ - INFO - <Response [200]>
+2017-01-24 09:59:10,632 - __main__ - INFO - created and updated cache
+2017-01-24 09:59:10,751 - __main__ - INFO - <Response [200]>
+2017-01-24 09:59:10,754 - __main__ - INFO - cache up to date
+2017-01-24 09:59:10,851 - __main__ - INFO - <Response [200]>
+2017-01-24 09:59:10,853 - __main__ - INFO - cache up to date
+2017-01-24 09:59:10,975 - __main__ - INFO - <Response [200]>
+2017-01-24 09:59:10,976 - __main__ - INFO - cache up to date
+2017-01-24 09:59:11,112 - __main__ - INFO - <Response [200]>
+2017-01-24 09:59:11,114 - __main__ - INFO - cache up to date
+2017-01-24 10:02:40,905 - __main__ - INFO - <Response [200]>
+2017-01-24 10:06:19,284 - __main__ - INFO - <Response [200]>
+2017-01-24 10:07:40,816 - __main__ - INFO - <Response [200]>
+2017-01-24 10:08:43,486 - __main__ - INFO - <Response [200]>
+2017-01-24 10:15:53,195 - __main__ - INFO - <Response [200]>
+2017-01-24 10:15:53,196 - __main__ - INFO - created and updated cache
+2017-01-24 10:15:53,357 - __main__ - INFO - <Response [200]>
+2017-01-24 10:15:53,358 - __main__ - INFO - cache up to date
+2017-01-24 10:15:53,488 - __main__ - INFO - <Response [200]>
+2017-01-24 10:15:53,489 - __main__ - INFO - cache up to date
+2017-01-24 10:15:53,606 - __main__ - INFO - <Response [200]>
+2017-01-24 10:15:53,607 - __main__ - INFO - cache up to date
+2017-01-24 10:15:53,715 - __main__ - INFO - <Response [200]>
+2017-01-24 10:15:53,716 - __main__ - INFO - cache up to date
+2017-01-24 10:16:01,663 - __main__ - INFO - <Response [200]>
+2017-01-24 10:16:01,664 - __main__ - INFO - cache up to date
+2017-01-24 10:16:01,785 - __main__ - INFO - <Response [200]>
+2017-01-24 10:16:01,785 - __main__ - INFO - cache up to date
+2017-01-24 10:16:01,934 - __main__ - INFO - <Response [200]>
+2017-01-24 10:16:01,936 - __main__ - INFO - cache up to date
+2017-01-24 10:16:02,062 - __main__ - INFO - <Response [200]>
+2017-01-24 10:16:02,064 - __main__ - INFO - cache up to date
+2017-01-24 10:16:02,181 - __main__ - INFO - <Response [200]>
+2017-01-24 10:16:02,183 - __main__ - INFO - cache up to date
+2017-01-24 10:16:25,624 - __main__ - INFO - <Response [200]>
+2017-01-24 10:19:10,642 - __main__ - INFO - <Response [200]>
+2017-01-24 10:20:38,855 - __main__ - INFO - <Response [200]>
+2017-01-24 10:21:49,779 - __main__ - INFO - <Response [200]>
+2017-01-24 10:22:41,202 - __main__ - INFO - <Response [200]>
+2017-01-24 10:24:04,009 - __main__ - INFO - <Response [200]>
+2017-01-24 10:25:17,828 - __main__ - INFO - <Response [200]>
+2017-01-24 10:27:51,025 - __main__ - INFO - <Response [200]>
+2017-01-24 10:35:26,158 - __main__ - INFO - <Response [200]>
+2017-01-24 10:36:43,480 - __main__ - INFO - <Response [200]>
+2017-01-24 11:19:11,121 - __main__ - INFO - <Response [200]>
+2017-01-24 11:19:11,123 - __main__ - INFO - updated cache
+2017-01-24 11:19:11,252 - __main__ - INFO - <Response [200]>
+2017-01-24 11:19:11,253 - __main__ - INFO - cache up to date
+2017-01-24 11:19:11,358 - __main__ - INFO - <Response [200]>
+2017-01-24 11:19:11,359 - __main__ - INFO - cache up to date
+2017-01-24 11:19:11,485 - __main__ - INFO - <Response [200]>
+2017-01-24 11:19:11,487 - __main__ - INFO - cache up to date
+2017-01-24 11:19:11,628 - __main__ - INFO - <Response [200]>
+2017-01-24 11:19:11,629 - __main__ - INFO - cache up to date
+2017-01-24 11:21:30,238 - __main__ - INFO - <Response [200]>
+2017-01-24 11:21:56,449 - __main__ - INFO - <Response [200]>
+2017-01-24 11:23:03,288 - __main__ - INFO - <Response [200]>
+2017-01-24 11:24:26,137 - __main__ - INFO - <Response [200]>
+2017-01-24 11:26:51,779 - __main__ - INFO - <Response [200]>
+2017-01-24 11:27:30,570 - __main__ - INFO - <Response [200]>
+2017-01-24 11:29:06,249 - __main__ - INFO - <Response [200]>
+2017-01-24 11:29:33,758 - __main__ - INFO - <Response [200]>
+2017-01-24 11:30:50,882 - __main__ - INFO - <Response [200]>
+2017-01-24 11:30:50,886 - __main__ - INFO - updated cache
+2017-01-24 11:30:51,050 - __main__ - INFO - <Response [200]>
+2017-01-24 11:30:51,051 - __main__ - INFO - cache up to date
+2017-01-24 11:30:51,175 - __main__ - INFO - <Response [200]>
+2017-01-24 11:30:51,176 - __main__ - INFO - cache up to date
+2017-01-24 11:30:51,304 - __main__ - INFO - <Response [200]>
+2017-01-24 11:30:51,306 - __main__ - INFO - cache up to date
+2017-01-24 11:30:51,420 - __main__ - INFO - <Response [200]>
+2017-01-24 11:30:51,421 - __main__ - INFO - cache up to date
+2017-01-24 11:52:13,077 - __main__ - INFO - <Response [200]>
+2017-01-24 11:52:13,079 - __main__ - INFO - updated cache
+2017-01-24 11:52:13,201 - __main__ - INFO - <Response [200]>
+2017-01-24 11:52:13,201 - __main__ - INFO - cache up to date
+2017-01-24 11:52:13,304 - __main__ - INFO - <Response [200]>
+2017-01-24 11:52:13,305 - __main__ - INFO - cache up to date
+2017-01-24 11:52:13,405 - __main__ - INFO - <Response [200]>
+2017-01-24 11:52:13,406 - __main__ - INFO - cache up to date
+2017-01-24 11:52:13,539 - __main__ - INFO - <Response [200]>
+2017-01-24 11:52:13,539 - __main__ - INFO - cache up to date
+2017-01-24 11:55:02,232 - __main__ - INFO - <Response [200]>
+2017-01-24 11:56:02,844 - __main__ - INFO - <Response [200]>
+2017-01-24 11:56:02,845 - __main__ - INFO - created and updated cache
+2017-01-24 11:56:02,955 - __main__ - INFO - <Response [200]>
+2017-01-24 11:56:02,957 - __main__ - INFO - cache up to date
+2017-01-24 11:56:03,055 - __main__ - INFO - <Response [200]>
+2017-01-24 11:56:03,056 - __main__ - INFO - cache up to date
+2017-01-24 11:56:03,165 - __main__ - INFO - <Response [200]>
+2017-01-24 11:56:03,167 - __main__ - INFO - cache up to date
+2017-01-24 11:56:03,275 - __main__ - INFO - <Response [200]>
+2017-01-24 11:56:03,277 - __main__ - INFO - cache up to date
+2017-01-24 12:02:27,630 - __main__ - INFO - <Response [200]>
+2017-01-24 12:04:21,880 - __main__ - INFO - <Response [200]>
+2017-01-24 12:05:07,825 - __main__ - INFO - <Response [200]>
+2017-01-24 12:05:07,828 - __main__ - INFO - updated cache
+2017-01-24 12:05:07,928 - __main__ - INFO - <Response [200]>
+2017-01-24 12:05:07,930 - __main__ - INFO - cache up to date
+2017-01-24 12:05:08,036 - __main__ - INFO - <Response [200]>
+2017-01-24 12:05:08,038 - __main__ - INFO - cache up to date
+2017-01-24 12:05:08,269 - __main__ - INFO - <Response [200]>
+2017-01-24 12:05:08,270 - __main__ - INFO - cache up to date
+2017-01-24 12:05:08,432 - __main__ - INFO - <Response [200]>
+2017-01-24 12:05:08,434 - __main__ - INFO - cache up to date
+2017-01-24 12:09:31,997 - __main__ - INFO - <Response [200]>
+2017-01-24 12:09:32,000 - __main__ - INFO - updated cache
+2017-01-24 12:09:32,098 - __main__ - INFO - <Response [200]>
+2017-01-24 12:09:32,100 - __main__ - INFO - cache up to date
+2017-01-24 12:09:32,201 - __main__ - INFO - <Response [200]>
+2017-01-24 12:09:32,203 - __main__ - INFO - cache up to date
+2017-01-24 12:09:32,304 - __main__ - INFO - <Response [200]>
+2017-01-24 12:09:32,305 - __main__ - INFO - cache up to date
+2017-01-24 12:09:32,422 - __main__ - INFO - <Response [200]>
+2017-01-24 12:09:32,423 - __main__ - INFO - cache up to date
+2017-01-24 12:10:45,046 - __main__ - INFO - <Response [200]>
+2017-01-24 12:10:45,047 - __main__ - INFO - updated cache
+2017-01-24 12:10:45,165 - __main__ - INFO - <Response [200]>
+2017-01-24 12:10:45,168 - __main__ - INFO - cache up to date
+2017-01-24 12:10:45,267 - __main__ - INFO - <Response [200]>
+2017-01-24 12:10:45,269 - __main__ - INFO - cache up to date
+2017-01-24 12:10:45,367 - __main__ - INFO - <Response [200]>
+2017-01-24 12:10:45,369 - __main__ - INFO - cache up to date
+2017-01-24 12:10:45,493 - __main__ - INFO - <Response [200]>
+2017-01-24 12:10:45,495 - __main__ - INFO - cache up to date
+2017-01-24 12:11:42,383 - __main__ - INFO - <Response [200]>
+2017-01-24 12:11:42,385 - __main__ - INFO - updated cache
+2017-01-24 12:11:42,514 - __main__ - INFO - <Response [200]>
+2017-01-24 12:11:42,516 - __main__ - INFO - cache up to date
+2017-01-24 12:11:42,636 - __main__ - INFO - <Response [200]>
+2017-01-24 12:11:42,639 - __main__ - INFO - cache up to date
+2017-01-24 12:11:42,771 - __main__ - INFO - <Response [200]>
+2017-01-24 12:11:42,771 - __main__ - INFO - cache up to date
+2017-01-24 12:11:42,898 - __main__ - INFO - <Response [200]>
+2017-01-24 12:11:42,900 - __main__ - INFO - cache up to date
+2017-01-24 12:12:25,522 - __main__ - INFO - <Response [200]>
+2017-01-24 12:12:25,525 - __main__ - INFO - updated cache
+2017-01-24 12:12:25,635 - __main__ - INFO - <Response [200]>
+2017-01-24 12:12:25,636 - __main__ - INFO - cache up to date
+2017-01-24 12:12:25,751 - __main__ - INFO - <Response [200]>
+2017-01-24 12:12:25,752 - __main__ - INFO - cache up to date
+2017-01-24 12:12:25,853 - __main__ - INFO - <Response [200]>
+2017-01-24 12:12:25,855 - __main__ - INFO - cache up to date
+2017-01-24 12:12:25,969 - __main__ - INFO - <Response [200]>
+2017-01-24 12:12:25,971 - __main__ - INFO - cache up to date
+2017-01-24 12:13:08,400 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:08,402 - __main__ - INFO - created and updated cache
+2017-01-24 12:13:08,548 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:08,549 - __main__ - INFO - cache up to date
+2017-01-24 12:13:08,657 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:08,658 - __main__ - INFO - cache up to date
+2017-01-24 12:13:08,768 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:08,770 - __main__ - INFO - cache up to date
+2017-01-24 12:13:08,879 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:08,881 - __main__ - INFO - cache up to date
+2017-01-24 12:13:32,710 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:32,713 - __main__ - INFO - updated cache
+2017-01-24 12:13:32,837 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:32,839 - __main__ - INFO - cache up to date
+2017-01-24 12:13:32,981 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:32,982 - __main__ - INFO - cache up to date
+2017-01-24 12:13:33,100 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:33,102 - __main__ - INFO - cache up to date
+2017-01-24 12:13:33,215 - __main__ - INFO - <Response [200]>
+2017-01-24 12:13:33,217 - __main__ - INFO - cache up to date
+2017-01-24 15:38:27,692 - __main__ - INFO - <Response [200]>
+2017-01-24 15:41:01,091 - __main__ - INFO - <Response [200]>
+2017-01-24 15:41:42,437 - __main__ - INFO - <Response [200]>
+2017-01-24 15:41:42,902 - __main__ - INFO - <Response [200]>
+2017-01-24 15:41:42,902 - __main__ - INFO - cache up to date
+2017-01-24 15:41:43,163 - __main__ - INFO - <Response [200]>
+2017-01-24 15:41:43,164 - __main__ - INFO - cache up to date
+2017-01-24 15:41:43,301 - __main__ - INFO - <Response [200]>
+2017-01-24 15:41:43,302 - __main__ - INFO - cache up to date
+2017-01-24 15:41:43,471 - __main__ - INFO - <Response [200]>
+2017-01-24 15:41:43,472 - __main__ - INFO - cache up to date
+2017-01-24 15:45:09,019 - __main__ - INFO - <Response [200]>
+2017-01-24 15:45:09,186 - __main__ - INFO - <Response [200]>
+2017-01-24 15:45:09,188 - __main__ - INFO - cache up to date
+2017-01-24 15:45:09,300 - __main__ - INFO - <Response [200]>
+2017-01-24 15:45:09,302 - __main__ - INFO - cache up to date
+2017-01-24 15:45:09,406 - __main__ - INFO - <Response [200]>
+2017-01-24 15:45:09,407 - __main__ - INFO - cache up to date
+2017-01-24 15:45:09,541 - __main__ - INFO - <Response [200]>
+2017-01-24 15:45:09,542 - __main__ - INFO - cache up to date
+2017-01-24 15:48:38,444 - __main__ - INFO - <Response [200]>
+2017-01-24 15:49:20,096 - __main__ - INFO - <Response [200]>
+2017-01-24 15:49:20,219 - __main__ - INFO - <Response [200]>
+2017-01-24 15:49:20,222 - __main__ - INFO - cache up to date
+2017-01-24 15:49:20,320 - __main__ - INFO - <Response [200]>
+2017-01-24 15:49:20,322 - __main__ - INFO - cache up to date
+2017-01-24 15:49:20,420 - __main__ - INFO - <Response [200]>
+2017-01-24 15:49:20,422 - __main__ - INFO - cache up to date
+2017-01-24 15:49:20,550 - __main__ - INFO - <Response [200]>
+2017-01-24 15:49:20,551 - __main__ - INFO - cache up to date
+2017-01-24 15:50:00,472 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:00,605 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:00,606 - __main__ - INFO - cache up to date
+2017-01-24 15:50:00,737 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:00,740 - __main__ - INFO - cache up to date
+2017-01-24 15:50:00,905 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:00,906 - __main__ - INFO - cache up to date
+2017-01-24 15:50:01,010 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:01,011 - __main__ - INFO - cache up to date
+2017-01-24 15:50:13,025 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:13,136 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:13,138 - __main__ - INFO - cache up to date
+2017-01-24 15:50:13,233 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:13,235 - __main__ - INFO - cache up to date
+2017-01-24 15:50:13,334 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:13,336 - __main__ - INFO - cache up to date
+2017-01-24 15:50:13,473 - __main__ - INFO - <Response [200]>
+2017-01-24 15:50:13,473 - __main__ - INFO - cache up to date
+2017-01-24 15:51:02,158 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:02,453 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:02,454 - __main__ - INFO - cache up to date
+2017-01-24 15:51:02,653 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:02,654 - __main__ - INFO - cache up to date
+2017-01-24 15:51:02,975 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:02,975 - __main__ - INFO - cache up to date
+2017-01-24 15:51:03,079 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:03,080 - __main__ - INFO - cache up to date
+2017-01-24 15:51:30,244 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:30,443 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:30,445 - __main__ - INFO - cache up to date
+2017-01-24 15:51:30,660 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:30,662 - __main__ - INFO - cache up to date
+2017-01-24 15:51:30,783 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:30,785 - __main__ - INFO - cache up to date
+2017-01-24 15:51:30,911 - __main__ - INFO - <Response [200]>
+2017-01-24 15:51:30,911 - __main__ - INFO - cache up to date
+2017-01-24 16:00:40,466 - __main__ - INFO - <Response [200]>
+2017-01-24 16:00:40,469 - __main__ - INFO - updated cache
+2017-01-24 16:00:40,652 - __main__ - INFO - <Response [200]>
+2017-01-24 16:00:40,653 - __main__ - INFO - cache up to date
+2017-01-24 16:00:40,888 - __main__ - INFO - <Response [200]>
+2017-01-24 16:00:40,891 - __main__ - INFO - cache up to date
+2017-01-24 16:00:41,038 - __main__ - INFO - <Response [200]>
+2017-01-24 16:00:41,040 - __main__ - INFO - cache up to date
+2017-01-24 16:00:41,181 - __main__ - INFO - <Response [200]>
+2017-01-24 16:00:41,182 - __main__ - INFO - cache up to date
+2017-01-24 16:04:00,546 - __main__ - INFO - <Response [200]>
+2017-01-24 16:04:00,547 - __main__ - INFO - updated cache
+2017-01-24 16:04:00,666 - __main__ - INFO - <Response [200]>
+2017-01-24 16:04:00,668 - __main__ - INFO - cache up to date
+2017-01-24 16:04:00,763 - __main__ - INFO - <Response [200]>
+2017-01-24 16:04:00,766 - __main__ - INFO - cache up to date
+2017-01-24 16:04:00,870 - __main__ - INFO - <Response [200]>
+2017-01-24 16:04:00,871 - __main__ - INFO - cache up to date
+2017-01-24 16:04:01,070 - __main__ - INFO - <Response [200]>
+2017-01-24 16:04:01,073 - __main__ - INFO - cache up to date
