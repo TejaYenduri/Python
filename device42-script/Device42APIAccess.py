@@ -240,7 +240,8 @@ class Device42Svc:
                             self.logger.info(room_id)
                             self.delete_method_using_id(self.rooms_url, room_id)
                             if not self.is_cache:
-                                building_id = self.get_id(payload['building'], self.buildings_url, "buildings", "building_id")
+                                building_id = self.get_id(payload['building'], self.buildings_url, "buildings",
+                                                          "building_id")
                                 self.delete_method_using_id(self.buildings_url, building_id)
 
             self.check_params(payload, {'name', 'size'})
@@ -394,12 +395,11 @@ class Device42Svc:
     def get_id(self, name, url, type_of, id_type):
         response = self.get_method(url)
         if response.status_code == 200:
-            output =response.json()
+            output = response.json()
             for i in xrange(len(output[type_of])):
                 if output[type_of]['name'] == name:
                     return output[type_of][id_type]
         return -1
-
 
     def post_buildings_csv(self, filename):
 
@@ -502,6 +502,7 @@ class Device42Svc:
         """
         response = self.delete_method_using_id(self.devices_url, device_id)
         return response
+
 
 d42 = Device42Svc('credentials.cfg')
 d42.get_all_buildings()
