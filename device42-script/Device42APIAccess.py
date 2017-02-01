@@ -51,30 +51,33 @@ class Device42Svc:
             self.logger.info("please provide config file name")
 
     def update_cache(self, file_path, url, type_of):
-        path = os.getcwd() + file_path
-        response = self.get_method(url)
-        if response.status_code == 200:
-            response.encoding = 'utf-8'
-            output = response.json()
-            if os.path.exists(path) and os.path.getsize(path) > 0:
-                cache_data = self.read_from_cache(path)
-                if cache_data == output:
-                    self.logger.info("cache up to date")
+        try:
+            path = os.getcwd() + file_path
+            response = self.get_method(url)
+            if response is not None and response.status_code == 200:
+                response.encoding = 'utf-8'
+                output = response.json()
+                if os.path.exists(path) and os.path.getsize(path) > 0:
+                    cache_data = self.read_from_cache(path)
+                    if cache_data == output:
+                        self.logger.info("cache up to date")
+                    else:
+                        records_list = output[type_of]
+                        print type(records_list), type(cache_data)
+                        records = [a for a in records_list if (a not in cache_data)]
+                        for record in records:
+                            cache_data.append(record)
+                        with open(path, "w") as file_object:
+                            json.dump(cache_data, file_object, indent=4, sort_keys=True)
+                        self.logger.info("updated cache")
                 else:
-                    records_list = output[type_of]
-                    print type(records_list), type(cache_data)
-                    records = [a for a in records_list if (a not in cache_data)]
-                    for record in records:
-                        cache_data.append(record)
-                    with open(path, "w") as file_object:
-                        json.dump(cache_data, file_object, indent=4, sort_keys=True)
-                    self.logger.info("updated cache")
+                    with open(path, 'w') as f:
+                        json.dump(output[type_of], f, indent=4, sort_keys=True, ensure_ascii=False)
+                        self.logger.info("created and updated cache")
             else:
-                with open(path, 'w') as f:
-                    json.dump(output[type_of], f, indent=4, sort_keys=True, ensure_ascii=False)
-                    self.logger.info("created and updated cache")
-        else:
-            self.logger.info(response)
+                self.logger.info(response)
+        except (OSError, RequestException, HTTPError) as err:
+            self.logger.info(err)
 
     @staticmethod
     def read_from_cache(file_path):
@@ -191,10 +194,12 @@ class Device42Svc:
 
             building_response = None
             response = None
+            is_found = False
             if payload['building']:
                 self.check_params(payload, {'name', 'building'})
                 buildings = self.get_all_buildings()
-                is_found = self.is_building_exists(buildings, payload['building'])
+                if buildings is not None:
+                    is_found = self.is_building_exists(buildings.json()['buildings'], payload['building'])
                 if not is_found:
                     building_dict = {'name': payload['building']}
                     building_response = self.post_building(building_dict)
@@ -503,9 +508,8 @@ class Device42Svc:
         response = self.delete_method_using_id(self.devices_url, device_id)
         return response
 
-
-d42 = Device42Svc('credentials.cfg')
-d42.get_all_buildings()
+# d42 = Device42Svc('credentials.cfg')
+# d42.get_all_buildings()
 # d42.get_all_rooms()
 # d42.post_hardware_model({'name': 'PE 1950', 'type': '1', 'size': '1', 'depth': '1', 'part_no': '123', 'watts': '265',
 #                        'spec_url': 'www.dell.com', 'manufacturer': 'dell', 'notes': 'hellp'})
