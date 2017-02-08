@@ -63,3 +63,180 @@
 2017-02-08 01:34:02,250 - Device42APIAccess - INFO - cache up to date
 2017-02-08 01:34:02,252 - Device42APIAccess - INFO - <Mock name='post()' id='4482510288'>
 2017-02-08 01:34:02,253 - Device42APIAccess - INFO - <Mock name='post()' id='4482510288'>
+2017-02-08 08:49:33,771 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:49:33,774 - Device42APIAccess - INFO - cache up to date
+2017-02-08 08:49:33,904 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:49:33,907 - Device42APIAccess - INFO - cache up to date
+2017-02-08 08:49:34,004 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:49:34,007 - Device42APIAccess - INFO - updated cache
+2017-02-08 08:49:34,113 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:49:34,116 - Device42APIAccess - INFO - cache up to date
+2017-02-08 08:49:34,232 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:49:34,233 - Device42APIAccess - INFO - updated cache
+2017-02-08 08:50:20,304 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:50:20,306 - Device42APIAccess - INFO - cache up to date
+2017-02-08 08:50:20,428 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:50:20,431 - Device42APIAccess - INFO - cache up to date
+2017-02-08 08:50:20,542 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:50:20,544 - Device42APIAccess - INFO - updated cache
+2017-02-08 08:50:20,674 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:50:20,677 - Device42APIAccess - INFO - cache up to date
+2017-02-08 08:50:20,814 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 08:50:20,816 - Device42APIAccess - INFO - updated cache
+2017-02-08 08:50:20,818 - Device42APIAccess - INFO - <Mock name='post()' id='4386939088'>
+2017-02-08 08:50:20,819 - Device42APIAccess - INFO - <Mock name='post()' id='4386939088'>
+2017-02-08 11:19:10,193 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:19:10,196 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:19:10,346 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:19:10,349 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:19:10,481 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:19:10,485 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:19:10,663 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:19:10,664 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:19:10,776 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:19:10,777 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:26:03,332 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:26:03,335 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:26:03,482 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:26:03,485 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:26:03,599 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:26:03,601 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:26:03,740 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:26:03,742 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:26:03,851 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:26:03,853 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:29:32,167 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:29:32,169 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:29:32,408 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:29:32,412 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:29:32,552 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:29:32,553 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:29:32,712 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:29:32,714 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:29:32,824 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:29:32,826 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:29:32,831 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:38:43,719 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:38:43,722 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:38:43,859 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:38:43,862 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:38:43,997 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:38:43,999 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:38:44,157 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:38:44,158 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:38:44,304 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:38:44,305 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:38:44,309 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:39:31,135 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:39:31,138 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:39:31,266 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:39:31,269 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:39:31,373 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:39:31,375 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:39:31,508 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:39:31,510 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:39:31,676 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:39:31,679 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:39:31,683 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:40:23,232 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:40:23,235 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:40:23,370 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:40:23,371 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:40:23,471 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:40:23,474 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:40:23,597 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:40:23,599 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:40:23,756 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:40:23,758 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:40:23,762 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:56:59,689 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:56:59,691 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:56:59,845 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:56:59,847 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:56:59,977 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:56:59,980 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:57:00,117 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:57:00,119 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:57:00,269 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:57:00,270 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:57:00,274 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:59:05,433 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:59:05,434 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:59:05,566 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:59:05,568 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:59:05,668 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:59:05,671 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:59:05,814 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:59:05,814 - Device42APIAccess - INFO - cache up to date
+2017-02-08 11:59:05,959 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 11:59:05,960 - Device42APIAccess - INFO - updated cache
+2017-02-08 11:59:05,964 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:05:28,667 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:05:28,668 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:05:28,835 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:05:28,839 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:05:28,978 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:05:28,981 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:05:29,132 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:05:29,135 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:05:29,266 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:05:29,267 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:05:29,270 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:07:51,395 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:07:51,399 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:07:51,862 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:07:51,865 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:07:52,119 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:07:52,120 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:07:52,392 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:07:52,394 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:07:52,591 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:07:52,594 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:07:52,597 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:10:43,972 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:10:43,974 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:10:44,116 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:10:44,117 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:10:44,216 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:10:44,218 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:10:44,341 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:10:44,344 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:10:44,477 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:10:44,480 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:10:44,483 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:45:12,872 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:45:12,875 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:45:13,015 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:45:13,017 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:45:13,128 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:45:13,129 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:45:13,240 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:45:13,241 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:45:13,358 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:45:13,360 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:45:13,364 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:45:13,367 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:48:15,091 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:48:15,093 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:48:15,263 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:48:15,266 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:48:15,382 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:48:15,384 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:48:15,496 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:48:15,498 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:48:15,623 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:48:15,626 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:48:15,630 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:48:15,633 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:49:10,862 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:49:10,864 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:49:11,013 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:49:11,016 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:49:11,121 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:49:11,124 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:49:11,251 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:49:11,252 - Device42APIAccess - INFO - cache up to date
+2017-02-08 12:49:11,376 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:49:11,379 - Device42APIAccess - INFO - updated cache
+2017-02-08 12:49:11,382 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 12:49:11,383 - Device42APIAccess - INFO - <Response [200]>

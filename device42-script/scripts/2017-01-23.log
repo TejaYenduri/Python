@@ -1,1 +1,0 @@
-2017-01-23 00:13:13,400 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x10b2aca10>: Failed to establish a new connection: [Errno 60] Operation timed out',))

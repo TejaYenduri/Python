@@ -169,6 +169,7 @@ class Device42Svc:
             self.logger.info(response)
             if response.status_code == 200:
                 self.write_to_cache(file_path, payload)
+                
             return response
         except RequestException as err:
             self.logger.error(err)
@@ -197,12 +198,14 @@ class Device42Svc:
                 self.check_params(payload, {'name', 'building'})
                 buildings = self.get_all_buildings()
                 if buildings is not None:
-                    is_found = self.is_building_exists(buildings.json()['buildings'], payload['building'])
+                    is_found = self.is_building_exists(buildings.json(), payload['building'])
                 if not is_found:
                     building_dict = {'name': payload['building']}
                     building_response = self.post_building(building_dict)
                     if building_response.status_code == 200:
                         response = self.post_method(self.rooms_url, payload, os.getcwd() + self.rooms_cache)
+                else:
+                    response = self.post_method(self.rooms_url, payload, os.getcwd() + self.rooms_cache)
             else:
                 self.check_params(payload, {'name', 'building_id'})
                 response = self.post_method(self.rooms_url, payload, os.getcwd() + self.rooms_cache)
@@ -312,7 +315,7 @@ class Device42Svc:
         """
         try:
             self.check_params(payload, {'name'})
-            if payload['hardware']:
+            if 'hardware' in payload:
                 self.check_params(payload, {'hardware'})
                 models = self.get_all_models()
                 is_found = self.is_hardware_exists(models, payload['hardware'])

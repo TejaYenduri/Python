@@ -1,0 +1,257 @@
+2017-01-31 11:27:43,144 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x10fcac6d0>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 14:27:21,607 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x1027c4690>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 14:33:29,036 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x102fbc690>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 14:35:50,123 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x102dea690>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 17:52:06,401 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x106f486d0>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 17:54:04,323 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x1093466d0>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 18:02:07,377 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x107adb6d0>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 18:13:37,121 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x105081790>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 18:20:09,318 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x10a49a890>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 22:32:29,628 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x102429710>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 22:36:53,968 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x1035c3710>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 22:39:53,499 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/buildings/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x1067b56d0>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 22:39:53,502 - Device42APIAccess - INFO - None
+2017-01-31 22:41:08,919 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/racks/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x1067b5110>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 22:41:08,921 - Device42APIAccess - INFO - None
+2017-01-31 22:42:24,161 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/hardwares/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x1067b5590>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 22:42:24,164 - Device42APIAccess - INFO - None
+2017-01-31 22:43:39,441 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/rooms/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x1067b5050>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 22:43:39,443 - Device42APIAccess - INFO - None
+2017-01-31 22:44:54,531 - Device42APIAccess - ERROR - HTTPSConnectionPool(host='10.0.0.12', port=443): Max retries exceeded with url: /api/1.0/devices/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x1067b5650>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-01-31 22:44:54,631 - Device42APIAccess - INFO - None
+2017-01-31 23:07:45,345 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:08:23,617 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:09:32,016 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:10:54,910 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:11:14,261 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:12:07,334 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:16:25,989 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:17:03,002 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:17:53,344 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:17:53,346 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:17:53,457 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:18:47,599 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:18:47,602 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:18:47,861 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:18:47,862 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:18:48,066 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:18:48,067 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:18:48,324 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:18:48,325 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:18:48,470 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:18:48,472 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:19:04,625 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:04,626 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:19:04,757 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:04,757 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:19:04,866 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:04,867 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:19:05,061 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:05,063 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:19:05,257 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:05,258 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:19:38,330 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:38,333 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:19:38,471 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:38,474 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:19:38,591 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:38,593 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:19:38,755 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:38,758 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:19:38,894 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:19:38,898 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:21:12,358 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:21:12,360 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:21:12,483 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:21:12,485 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:21:12,640 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:21:12,641 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:21:12,801 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:21:12,803 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:21:12,911 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:21:12,914 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:21:12,915 - Device42APIAccess - INFO - <MagicMock name='request()' id='4364193872'>
+2017-01-31 23:24:52,152 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:24:52,155 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:24:52,279 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:24:52,280 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:24:52,389 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:24:52,391 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:24:52,535 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:24:52,537 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:24:52,662 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:24:52,664 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:24:52,665 - Device42APIAccess - INFO - <Mock name='request()' id='4300585168'>
+2017-01-31 23:31:57,160 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:31:57,162 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:31:57,287 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:31:57,288 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:31:57,410 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:31:57,411 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:31:57,539 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:31:57,540 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:31:57,653 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:31:57,655 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:32:17,815 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:17,816 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:32:17,923 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:17,924 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:32:18,070 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:18,072 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:32:18,235 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:18,240 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:32:18,435 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:18,437 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:32:18,437 - Device42APIAccess - INFO - <Mock name='request()' id='4335782096'>
+2017-01-31 23:32:56,091 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:56,094 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:32:56,211 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:56,212 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:32:56,335 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:56,337 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:32:56,476 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:56,478 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:32:56,603 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:32:56,604 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:32:56,605 - Device42APIAccess - INFO - <Mock name='request()' id='4461623504'>
+2017-01-31 23:33:12,723 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:12,726 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:33:12,861 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:12,863 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:33:13,014 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:13,014 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:33:13,155 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:13,156 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:33:13,285 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:13,287 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:33:13,287 - Device42APIAccess - INFO - <Mock name='request()' id='4486756560'>
+2017-01-31 23:33:50,737 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:50,739 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:33:50,908 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:50,909 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:33:51,073 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:51,075 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:33:51,239 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:51,240 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:33:51,360 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:33:51,362 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:33:51,364 - Device42APIAccess - INFO - <Mock name='request()' id='4415551696'>
+2017-01-31 23:34:05,713 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:05,714 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:34:05,923 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:05,924 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:34:06,152 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:06,153 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:34:06,406 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:06,408 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:34:06,629 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:06,629 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:34:06,630 - Device42APIAccess - INFO - <Mock name='request()' id='4311935184'>
+2017-01-31 23:34:30,654 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:30,657 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:34:30,754 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:30,756 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:34:30,866 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:30,868 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:34:30,987 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:30,990 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:34:31,100 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:34:31,103 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:34:31,104 - Device42APIAccess - INFO - <Mock name='request()' id='4500187344'>
+2017-01-31 23:35:06,328 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:35:06,331 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:35:06,518 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:35:06,520 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:35:06,719 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:35:06,719 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:35:06,947 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:35:06,949 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:35:07,168 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:35:07,170 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:35:07,171 - Device42APIAccess - INFO - <Mock name='request()' id='4471371984'>
+2017-01-31 23:36:53,700 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:36:53,702 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:36:53,835 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:36:53,836 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:36:53,973 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:36:53,976 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:36:54,116 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:36:54,119 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:36:54,263 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:36:54,264 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:48:06,989 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:06,992 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:48:07,242 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:07,244 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:48:07,424 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:07,426 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:48:07,696 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:07,699 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:48:07,847 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:07,847 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:48:07,848 - Device42APIAccess - INFO - <MagicMock name='request()' id='4548616144'>
+2017-01-31 23:48:25,640 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:25,643 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:48:25,777 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:25,779 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:48:25,907 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:25,909 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:48:26,098 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:26,100 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:48:26,223 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:48:26,225 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:53:46,508 - Device42APIAccess - INFO - <MagicMock name='request()' id='4499272528'>
+2017-01-31 23:54:02,520 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:02,521 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:54:02,632 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:02,633 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:54:02,745 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:02,746 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:54:02,891 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:02,893 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:54:03,008 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:03,008 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:54:03,012 - Device42APIAccess - INFO - <MagicMock name='request()' id='4475687760'>
+2017-01-31 23:54:21,129 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:21,131 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:54:21,236 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:21,237 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:54:21,351 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:21,353 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:54:21,469 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:21,472 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:54:21,584 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:21,586 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:54:21,589 - Device42APIAccess - INFO - <MagicMock name='request()' id='4404515664'>
+2017-01-31 23:54:29,466 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:29,468 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:54:29,598 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:29,600 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:54:29,719 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:29,721 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:54:29,836 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:29,836 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:54:29,941 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:54:29,945 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:54:29,951 - Device42APIAccess - INFO - <MagicMock name='request()' id='4416906064'>
+2017-01-31 23:56:06,308 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:56:06,310 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:56:06,431 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:56:06,433 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:56:06,560 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:56:06,562 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:56:06,707 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:56:06,709 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:56:06,843 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:56:06,844 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:59:36,577 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:59:36,580 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:59:36,702 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:59:36,704 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:59:36,812 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:59:36,814 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:59:37,016 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:59:37,017 - Device42APIAccess - INFO - updated cache
+2017-01-31 23:59:37,255 - Device42APIAccess - INFO - <Response [200]>
+2017-01-31 23:59:37,256 - Device42APIAccess - INFO - cache up to date
+2017-01-31 23:59:37,257 - Device42APIAccess - INFO - <Mock name='request()' id='4516452944'>

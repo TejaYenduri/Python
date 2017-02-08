@@ -1,0 +1,33 @@
+2017-02-01 00:00:11,590 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:11,592 - Device42APIAccess - INFO - updated cache
+2017-02-01 00:00:11,731 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:11,732 - Device42APIAccess - INFO - cache up to date
+2017-02-01 00:00:11,848 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:11,849 - Device42APIAccess - INFO - cache up to date
+2017-02-01 00:00:12,003 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:12,005 - Device42APIAccess - INFO - updated cache
+2017-02-01 00:00:12,145 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:12,148 - Device42APIAccess - INFO - cache up to date
+2017-02-01 00:00:12,149 - Device42APIAccess - INFO - <Mock name='request()' id='4554369616'>
+2017-02-01 00:00:38,122 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:38,123 - Device42APIAccess - INFO - updated cache
+2017-02-01 00:00:38,262 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:38,263 - Device42APIAccess - INFO - cache up to date
+2017-02-01 00:00:38,409 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:38,409 - Device42APIAccess - INFO - cache up to date
+2017-02-01 00:00:38,534 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:38,537 - Device42APIAccess - INFO - updated cache
+2017-02-01 00:00:38,650 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 00:00:38,651 - Device42APIAccess - INFO - cache up to date
+2017-02-01 00:00:38,652 - Device42APIAccess - INFO - <Mock name='request()' id='4355947088'>
+2017-02-01 13:38:11,190 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 13:38:11,193 - Device42APIAccess - INFO - updated cache
+2017-02-01 13:38:11,379 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 13:38:11,380 - Device42APIAccess - INFO - cache up to date
+2017-02-01 13:38:11,515 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 13:38:11,517 - Device42APIAccess - INFO - cache up to date
+2017-02-01 13:38:11,681 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 13:38:11,683 - Device42APIAccess - INFO - updated cache
+2017-02-01 13:38:11,906 - Device42APIAccess - INFO - <Response [200]>
+2017-02-01 13:38:11,908 - Device42APIAccess - INFO - cache up to date
+2017-02-01 13:38:11,908 - Device42APIAccess - INFO - <Mock name='request()' id='4359699024'>

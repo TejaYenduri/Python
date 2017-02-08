@@ -3,5 +3,8 @@
         "device": "nh-switch-01", 
         "rack_id": 29, 
         "start_at": 2
+    }, 
+    {
+        "name": "db-080-westport"
     }
 ]

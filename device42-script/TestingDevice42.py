@@ -1,4 +1,6 @@
 import unittest
+import responses
+
 import mock
 from Device42APIAccess import Device42Svc
 
@@ -77,7 +79,7 @@ class TestingDevice42(unittest.TestCase):
     def test_post_room(self, mock_get):
         mock_response = mock.Mock()
         expected_dict = {
-            "msg": ["Room added successfully", 7, "2nd Floor"],
+            "msg": ["Room added successfully", 7, "TestRoom"],
             "code": 0
         }
         mock_response.status_code = 200
@@ -89,6 +91,25 @@ class TestingDevice42(unittest.TestCase):
         mock_get.assert_called_once_with(url, auth=('admin', 'adm!nd42'), data=payload, verify=False)
         self.assertEqual(1, mock_get.call_count)
         self.assertEqual(response_dict.json(), expected_dict)
+
+    @responses.activate
+    def test_post_room_with_building(self):
+        responses.add(responses.POST, 'https://10.0.0.12/api/1.0/rooms/',
+                      body='[{"msg": ["Room added successfully", 7, "TestRoom"], "code": 0}]',
+                      content_type="application/json",
+                      status=200)
+        responses.add(responses.GET, 'https://10.0.0.12/api/1.0/buildings/',
+                      body='{"buildings": [{"address": "879 main st", "building_id": 4,'
+                           '"contact_name": "roger","contact_phone": "1234567890","custom_fields": [], '
+                           '"groups": "Prod_East:no, Corp:yes", "name": "Test Building", "notes": "super critical"}]}',
+                      content_type="application/json",
+                      status=200)
+        payload = {'name': 'TestRoom', 'building': 'Test Building'}
+        response = device42.post_room(payload)
+        assert response.json() == [{
+            "msg": ["Room added successfully", 7, "TestRoom"],
+            "code": 0
+        }]
 
     @mock.patch('Device42APIAccess.requests.post')
     def test_post_rack(self, mock_get):
@@ -137,6 +158,20 @@ class TestingDevice42(unittest.TestCase):
         url = 'https://10.0.0.12/api/1.0/device/rack/'
         payload = {'device': 'nh-switch-01', 'rack_id': 29, 'start_at': 2}
         response_dict = device42.post_device_rack(payload=payload)
+        mock_get.assert_called_once_with(url, auth=('admin', 'adm!nd42'), data=payload, verify=False)
+        self.assertEqual(1, mock_get.call_count)
+        self.assertEqual(response_dict.json(), expected_dict)
+
+    @mock.patch('Device42APIAccess.requests.post')
+    def test_post_device(self, mock_get):
+        mock_response = mock.Mock()
+        expected_dict = {"msg": ["device added or updated", 46, "db-080-westport", 'true', 'true'], "code": 0}
+        mock_response.status_code = 200
+        mock_response.json.return_value = expected_dict
+        mock_get.return_value = mock_response
+        url = 'https://10.0.0.12/api/1.0/devices/'
+        payload = {'name': 'db-080-westport'}
+        response_dict = device42.post_device(payload=payload)
         mock_get.assert_called_once_with(url, auth=('admin', 'adm!nd42'), data=payload, verify=False)
         self.assertEqual(1, mock_get.call_count)
         self.assertEqual(response_dict.json(), expected_dict)
