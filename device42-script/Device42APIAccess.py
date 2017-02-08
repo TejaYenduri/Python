@@ -38,12 +38,11 @@ class Device42Svc:
                 self.racks_cache = config.get('credentials', 'RACKS_CACHE')
                 self.hardware_cache = config.get('credentials', 'HARDWARE_CACHE')
                 self.devices_cache = config.get('credentials', 'DEVICES_CACHE')
-                if self.is_cache:
-                    self.update_cache(self.buildings_cache, self.buildings_url, "buildings")
-                    self.update_cache(self.racks_cache, self.racks_url, "racks")
-                    self.update_cache(self.hardware_cache, self.hardware_model, "models")
-                    self.update_cache(self.rooms_cache, self.rooms_url, "rooms")
-                    self.update_cache(self.devices_cache, self.devices_url, "Devices")
+                self.update_cache(self.buildings_cache, self.buildings_url, "buildings")
+                self.update_cache(self.racks_cache, self.racks_url, "racks")
+                self.update_cache(self.hardware_cache, self.hardware_model, "models")
+                self.update_cache(self.rooms_cache, self.rooms_url, "rooms")
+                self.update_cache(self.devices_cache, self.devices_url, "Devices")
 
             except ConfigParser.Error as err:
                 self.logger.error(err)
@@ -59,11 +58,10 @@ class Device42Svc:
                 output = response.json()
                 if os.path.exists(path) and os.path.getsize(path) > 0:
                     cache_data = self.read_from_cache(path)
-                    if cache_data == output:
+                    if cache_data == output[type_of]:
                         self.logger.info("cache up to date")
                     else:
                         records_list = output[type_of]
-                        print type(records_list), type(cache_data)
                         records = [a for a in records_list if (a not in cache_data)]
                         for record in records:
                             cache_data.append(record)
@@ -90,7 +88,7 @@ class Device42Svc:
         response = Device42Svc.read_from_cache(file_path)
         response.append(data)
         with open(file_path, "w") as file_object:
-            json.dump(data, file_object, indent=4, sort_keys=True)
+            json.dump(response, file_object, indent=4, sort_keys=True)
 
     @staticmethod
     def config_logs():
@@ -195,7 +193,7 @@ class Device42Svc:
             building_response = None
             response = None
             is_found = False
-            if payload['building']:
+            if 'building' in payload:
                 self.check_params(payload, {'name', 'building'})
                 buildings = self.get_all_buildings()
                 if buildings is not None:
@@ -213,7 +211,6 @@ class Device42Svc:
             else:
                 if building_response is not None and building_response.status_code == 200:
                     building_id = building_response.json()["msg"][1]
-                    print building_id
                     self.delete_method_using_id(self.buildings_url, building_id)
 
         except (RequestException, HTTPError, ParameterException) as err:
@@ -229,7 +226,7 @@ class Device42Svc:
             response = None
             if 'size' not in payload:
                 payload['size'] = 42
-            if payload['building']:
+            if 'building' in payload:
                 self.check_params(payload, {'room', 'building', 'name', 'size'})
                 rooms = self.get_all_rooms()
                 room_dict = {'name': payload['room'], 'building': payload['building']}
@@ -244,13 +241,13 @@ class Device42Svc:
                             room_id = room_response.json()["msg"][1]
                             self.logger.info(room_id)
                             self.delete_method_using_id(self.rooms_url, room_id)
-                            if not self.is_cache:
+                            if self.is_cache == 'False':
                                 building_id = self.get_id(payload['building'], self.buildings_url, "buildings",
                                                           "building_id")
                                 self.delete_method_using_id(self.buildings_url, building_id)
 
             self.check_params(payload, {'name', 'size'})
-            response = self.post_method(self.racks_url, payload, os.getcwd() + self.rooms_cache)
+            response = self.post_method(self.racks_url, payload, os.getcwd() + self.racks_cache)
             self.logger.info(response)
             if response.status_code == 200:
                 return response
@@ -275,7 +272,7 @@ class Device42Svc:
         Create a device with given data in device42 using POST
         """
         try:
-            if payload['hw_model']:
+            if 'hw_model' in payload:
                 self.check_params(payload, {'hw_model'})
                 models = self.get_all_models()
                 is_found = self.is_hardware_exists(models, payload['hw_model'])
@@ -285,13 +282,13 @@ class Device42Svc:
             if 'start_at' not in payload:
                 payload['start_at'] = 'auto'
             is_found = False
-            if payload['building']:
+            if 'building' in payload:
                 self.check_params(payload, {'device', 'room', 'building', 'start_at'})
                 racks = self.get_all_racks()
                 rack_dict = {'name': payload['rack'], 'room': payload['room'],
                              'building': payload['building']}
                 is_found = self.is_rack_exists(racks, rack_dict)
-            if is_found or payload['rack_id']:
+            if is_found or 'rack_id' in payload:
                 self.check_params(payload, {'device', 'rack_id', 'start_at'})
                 response = self.post_method(self.devices_rack_url, payload, os.getcwd() + self.devices_cache)
                 self.logger.info(response)

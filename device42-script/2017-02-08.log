@@ -1,0 +1,65 @@
+2017-02-08 00:51:47,988 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:51:47,990 - Device42APIAccess - INFO - cache up to date
+2017-02-08 00:51:48,169 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:51:48,172 - Device42APIAccess - INFO - updated cache
+2017-02-08 00:51:48,310 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:51:48,311 - Device42APIAccess - INFO - cache up to date
+2017-02-08 00:51:48,422 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:53:37,993 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:53:37,996 - Device42APIAccess - INFO - cache up to date
+2017-02-08 00:53:38,123 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:53:38,126 - Device42APIAccess - INFO - cache up to date
+2017-02-08 00:53:38,228 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:53:38,230 - Device42APIAccess - INFO - cache up to date
+2017-02-08 00:53:38,344 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:58:47,234 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:58:47,236 - Device42APIAccess - INFO - cache up to date
+2017-02-08 00:58:47,354 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:58:47,357 - Device42APIAccess - INFO - cache up to date
+2017-02-08 00:58:47,454 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:58:47,456 - Device42APIAccess - INFO - cache up to date
+2017-02-08 00:58:47,568 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:58:47,569 - Device42APIAccess - INFO - created and updated cache
+2017-02-08 00:58:47,686 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 00:58:47,688 - Device42APIAccess - INFO - cache up to date
+2017-02-08 00:58:47,689 - Device42APIAccess - INFO - <Mock name='post()' id='4411883280'>
+2017-02-08 00:58:47,690 - Device42APIAccess - INFO - <Mock name='post()' id='4411883280'>
+2017-02-08 01:09:21,057 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:09:21,060 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:09:21,288 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:15:08,977 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:15:08,980 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:15:09,122 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:15:09,126 - Device42APIAccess - INFO - created and updated cache
+2017-02-08 01:15:09,236 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:15:09,237 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:15:09,348 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:15:09,350 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:15:09,465 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:15:09,467 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:15:09,468 - Device42APIAccess - INFO - <Mock name='post()' id='4427762640'>
+2017-02-08 01:15:09,469 - Device42APIAccess - INFO - <Mock name='post()' id='4427762640'>
+2017-02-08 01:32:52,022 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:32:52,023 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:32:52,156 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:32:52,159 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:32:52,264 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:32:52,267 - Device42APIAccess - INFO - updated cache
+2017-02-08 01:32:52,396 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:32:52,397 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:32:52,512 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:32:52,514 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:32:52,515 - Device42APIAccess - INFO - missing required parameters set(['name'])
+2017-02-08 01:32:52,515 - Device42APIAccess - ERROR - "missing required parameters set(['name'])"
+2017-02-08 01:34:01,751 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:34:01,754 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:34:01,901 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:34:01,904 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:34:02,008 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:34:02,011 - Device42APIAccess - INFO - updated cache
+2017-02-08 01:34:02,132 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:34:02,134 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:34:02,248 - Device42APIAccess - INFO - <Response [200]>
+2017-02-08 01:34:02,250 - Device42APIAccess - INFO - cache up to date
+2017-02-08 01:34:02,252 - Device42APIAccess - INFO - <Mock name='post()' id='4482510288'>
+2017-02-08 01:34:02,253 - Device42APIAccess - INFO - <Mock name='post()' id='4482510288'>

@@ -1,3 +1,20 @@
-{
-    "racks": []
-}
+[
+    {
+        "asset_no": "", 
+        "available_u": 42.0, 
+        "col_size": 1.0, 
+        "custom_fields": [], 
+        "first_number": 1, 
+        "name": "34", 
+        "notes": "does it have anything?", 
+        "number_between_us": true, 
+        "numbering_start_from_bottom": "yes", 
+        "rack_id": 1, 
+        "rack_middle_option": "Start at", 
+        "rack_url": "/api/1.0/racks/1/", 
+        "row": "", 
+        "row_size": 1.0, 
+        "size": 42, 
+        "tags": []
+    }
+]
